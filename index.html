@@ -198,40 +198,108 @@
                     <a href="#courses" class="bg-white/20 text-white px-4 py-2 rounded-full hover:bg-white/30 transition-colors">Ilmoittaudu</a>
                 </div>
 
-                <button id="menu-btn" class="md:hidden flex flex-col justify-between w-8 h-6 focus:outline-none">
-                    <span class="block w-8 h-0.5 bg-white transition-all duration-300"></span>
-                    <span class="block w-8 h-0.5 bg-white transition-all duration-300"></span>
-                    <span class="block w-8 h-0.5 bg-white transition-all duration-300"></span>
-                </button>
+                                        <!-- Language Selector -->
+                        <div class="relative">
+                            <button id="lang-btn" class="flex items-center space-x-2 text-white hover:text-white/80 transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/>
+                                </svg>
+                                <span id="current-lang">EN</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                </svg>
+                            </button>
+                            <div id="lang-dropdown" class="hidden absolute right-0 mt-2 w-32 bg-white/95 backdrop-blur-lg rounded-xl shadow-lg overflow-hidden">
+                                <a href="https://espoo.aurinkolab.fi" class="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white transition-colors">🇬🇧 English</a>
+                                <a href="https://espoo.aurinkolab.fi/su" class="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white transition-colors">🇫🇮 Suomi</a>
+                                <a href="https://espoo.aurinkolab.fi/ru" class="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white transition-colors">🇷🇺 Русский</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Hamburger (hidden on desktop) -->
+                    <button id="menu-btn" class="md:hidden flex flex-col justify-between w-8 h-6 focus:outline-none">
+                        <span class="block w-8 h-0.5 bg-white transition-all duration-300"></span>
+                        <span class="block w-8 h-0.5 bg-white transition-all duration-300"></span>
+                        <span class="block w-8 h-0.5 bg-white transition-all duration-300"></span>
+                    </button>
+                </div>
             </div>
-        </div>
 
-        <div id="mobile-menu" class="hidden md:hidden bg-black/90 backdrop-blur-lg">
-            <div class="flex flex-col space-y-4 p-6">
-                <a href="#courses" class="text-white hover:text-violet-400">Kurssit</a>
-                <a href="#schedule" class="text-white hover:text-violet-400">Aikataulu</a>
-                <a href="https://espoo.aurinkolab.fi/robohacks" class="text-white hover:text-violet-400">RoboHacks</a>
-                <a href="#location" class="text-white hover:text-violet-400">Sijainti</a>
-                <a href="https://aurinkolab.fi" target="_blank" class="text-white/80 hover:text-white">Tietoa meistä</a>
-                <a href="#courses" class="bg-white/20 text-white px-4 py-2 rounded-full hover:bg-white/30 transition-colors text-center">Ilmoittaudu</a>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden bg-black/90 backdrop-blur-lg">
+                <div class="flex flex-col space-y-4 p-6">
+                    <a href="#courses" class="text-white hover:text-violet-400">Courses</a>
+                    <a href="#schedule" class="text-white hover:text-violet-400">Schedule</a>
+                    <a href="#upcoming-events" class="text-white hover:text-violet-400">Upcoming Events</a>
+                    <a href="https://espoo.aurinkolab.fi/robohacks" class="text-white hover:text-violet-400">RoboHacks</a>
+                    <a href="#team" class="text-white hover:text-violet-400">Team</a>
+                    <a href="#location" class="text-white hover:text-violet-400">Location</a>
+                    <a href="https://aurinkolab.fi" target="_blank" class="text-white/80 hover:text-white">About Us</a>
+                    <a href="#courses" class="bg-white/20 text-white px-4 py-2 rounded-full hover:bg-white/30 transition-colors text-center">Register</a>
+                    
+                    <!-- Mobile Language Selector -->
+                    <div class="border-t border-white/20 pt-4 mt-4">
+                        <p class="text-white/60 text-sm mb-2">Language / Kieli / Язык</p>
+                        <div class="flex flex-col space-y-2">
+                            <a href="https://espoo.aurinkolab.fi" class="text-white hover:text-violet-400">🇬🇧 English</a>
+                            <a href="https://espoo.aurinkolab.fi/su" class="text-white hover:text-violet-400">🇫🇮 Suomi</a>
+                            <a href="https://espoo.aurinkolab.fi/ru" class="text-white hover:text-violet-400">🇷🇺 Русский</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
 
-    <script>
-        const btn = document.getElementById("menu-btn");
-        const menu = document.getElementById("mobile-menu");
-        const lines = btn.querySelectorAll("span");
+        <script>
+            // Mobile menu toggle
+            const btn = document.getElementById("menu-btn");
+            const menu = document.getElementById("mobile-menu");
+            const lines = btn.querySelectorAll("span");
 
-        btn.addEventListener("click", () => {
-            menu.classList.toggle("hidden");
-            lines[0].classList.toggle("rotate-45");
-            lines[0].classList.toggle("translate-y-2");
-            lines[1].classList.toggle("opacity-0");
-            lines[2].classList.toggle("-rotate-45");
-            lines[2].classList.toggle("-translate-y-2");
-        });
-    </script>
+            btn.addEventListener("click", () => {
+                menu.classList.toggle("hidden");
+
+                // Animate hamburger → X
+                lines[0].classList.toggle("rotate-45");
+                lines[0].classList.toggle("translate-y-2");
+                lines[1].classList.toggle("opacity-0");
+                lines[2].classList.toggle("-rotate-45");
+                lines[2].classList.toggle("-translate-y-2");
+            });
+
+            // Language dropdown toggle
+            const langBtn = document.getElementById("lang-btn");
+            const langDropdown = document.getElementById("lang-dropdown");
+
+            if (langBtn && langDropdown) {
+                langBtn.addEventListener("click", (e) => {
+                    e.stopPropagation();
+                    langDropdown.classList.toggle("hidden");
+                });
+
+                // Close dropdown when clicking outside
+                document.addEventListener("click", (e) => {
+                    if (!langBtn.contains(e.target) && !langDropdown.contains(e.target)) {
+                        langDropdown.classList.add("hidden");
+                    }
+                });
+            }
+
+            // Detect current language and update button
+            const currentPath = window.location.pathname;
+            const currentLangSpan = document.getElementById("current-lang");
+            
+            if (currentLangSpan) {
+                if (currentPath.includes('/su')) {
+                    currentLangSpan.textContent = 'FI';
+                } else if (currentPath.includes('/ru')) {
+                    currentLangSpan.textContent = 'RU';
+                } else {
+                    currentLangSpan.textContent = 'ENG';
+                }
+            }
+        </script>
 
     <!-- Hero Section -->
     <div id="hero" class="relative w-full h-[500px] overflow-hidden">
