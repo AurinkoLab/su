@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Erasmus nuorille yrittäjille — AurinkoLab Espoo</title>
+<meta name="description" content="Maksuton, omaan tahtiin etenevä verkkovalmennus Erasmus nuorille yrittäjille -vaihto-ohjelmaan. Seitsemän moduulia kelpoisuudesta, liiketoimintasuunnitelmasta, isännän löytämisestä, sopimuksista ja rahoituksesta.">
+<meta name="color-scheme" content="light">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Erasmus nuorille yrittäjille — AurinkoLab Espoo">
+<meta property="og:description" content="Maksuton, omaan tahtiin etenevä verkkovalmennus. Valmistautumista eurooppalaiseen vaihto-ohjelmaan uusille yrittäjille. AurinkoLab ei ole paikallinen yhteyspiste eikä käsittele hakemuksia.">
+<meta property="og:site_name" content="AurinkoLab Espoo">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F4F2EA; --panel:#EBE7D9; --line:#D8D3C4; --line-soft:rgba(216,211,196,.6);
+  --ink:#3A3831; --soft:#5C594E; --faint:#827D70; --ghost:#A39E8F;
+  --a1:#2F7D6E; --a2:#2F5FA8; --a3:#A8414F; --a4:#71499B;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:'Plus Jakarta Sans',sans-serif;font-size:16px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.hf{font-family:'Space Grotesk',sans-serif}
+a{color:inherit}
+button{font:inherit}
+:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:4px 12px;border-radius:999px;
+  background:var(--panel);border:1px solid var(--line);font-size:10px;font-weight:700;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--faint)}
+
+/* ---------------- top banner + nav (matches the main site) ---------------- */
+.banner{background:var(--panel);border-bottom:1px solid var(--line);padding:10px 16px;text-align:center;
+  font-size:13px;font-weight:500;color:var(--soft);letter-spacing:.01em}
+.banner .in{max-width:80rem;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:center;
+  align-items:center;gap:10px}
+.banner .pill{padding:3px 12px;border-radius:999px;background:var(--bg);border:1px solid var(--line);
+  font-weight:700;font-size:10px;letter-spacing:.09em;text-transform:uppercase}
+.banner .dot{color:var(--line)}
+
+nav.top{position:sticky;top:0;z-index:50;background:rgba(244,242,234,.92);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav.top .in{max-width:80rem;margin:0 auto;padding:0 24px;height:80px;display:flex;
+  align-items:center;justify-content:space-between;gap:16px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo .sq{width:44px;height:44px;border-radius:12px;background:var(--panel);border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:center;font-weight:700;font-size:24px;flex:none}
+.logo .nm{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:24px;letter-spacing:-.02em;line-height:1.05}
+.logo .nm span{font-weight:400}
+.logo .sub{display:block;font-size:8px;letter-spacing:.3em;text-transform:uppercase;color:var(--soft);
+  margin-top:-2px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:600}
+nav.top .links{display:flex;align-items:center;gap:22px;font-size:14px;font-weight:600;color:var(--soft)}
+nav.top .links a{text-decoration:none}
+nav.top .links a:hover{color:var(--ink)}
+@media(max-width:680px){
+  nav.top .in{height:auto;padding:12px 18px;flex-wrap:wrap}
+  nav.top .links{gap:14px;font-size:13px}
+  .logo .sub{display:none}
+}
+
+/* ---------------------------- course intro ---------------------------- */
+.wrap{max-width:80rem;margin:0 auto;padding:0 24px}
+.intro{padding:56px 0 8px}
+.intro h1{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(34px,6vw,60px);
+  line-height:1.04;letter-spacing:-.025em;margin:18px 0 18px;max-width:22ch}
+.intro .lede{font-size:18px;color:var(--soft);max-width:60ch;margin:0 0 24px;line-height:1.7}
+.grid2{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:36px;align-items:start;padding-bottom:20px}
+@media(max-width:900px){.grid2{grid-template-columns:1fr;gap:26px}}
+.box{background:var(--panel);border:1px solid var(--line);border-radius:2rem;padding:28px 30px}
+.box h3{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:22px;margin:0 0 18px}
+.box dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:9px 16px;font-size:14px}
+.box dt{color:var(--faint);font-weight:600}
+.box dd{margin:0;font-weight:600}
+h3.sect{font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--faint);margin:28px 0 10px}
+.intro ul{margin:0 0 6px;padding-left:20px;color:var(--soft)}
+.intro li{margin-bottom:8px}
+
+.alert{border:1px solid var(--line);border-left:4px solid #A8414F;background:#fff;
+  border-radius:0 1rem 1rem 0;padding:16px 20px;margin:0 0 22px;font-size:14.5px;color:var(--soft);line-height:1.65}
+.alert b{color:var(--ink)}
+.cta{display:flex;align-items:center;justify-content:center;width:100%;text-align:center;background:var(--bg);border:1px solid var(--line);
+  color:var(--ink);font-weight:700;padding:15px 20px;border-radius:12px;text-decoration:none;
+  cursor:pointer;margin-top:20px;transition:background .2s}
+.cta:hover{background:var(--line)}
+.cta.solid{background:var(--panel)}
+.tiny{font-size:12px;color:var(--faint);margin:12px 0 0;line-height:1.5}
+.pbar{height:6px;background:var(--bg);border:1px solid var(--line);border-radius:999px;overflow:hidden;margin:0 0 8px}
+.pbar i{display:block;height:100%;background:var(--faint)}
+
+/* ---------------------------- module list ---------------------------- */
+.modules{border-top:1px solid var(--line);margin-top:20px;padding:44px 0 60px}
+.modules>h2{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:36px;margin:14px 0 10px}
+.modules>p{color:var(--soft);max-width:66ch;margin:0 0 30px}
+.mrow{display:grid;grid-template-columns:auto 1fr auto;gap:22px;align-items:start;
+  background:var(--bg);border:1px solid var(--line);border-radius:2rem;padding:22px 26px;margin-bottom:14px;
+  transition:border-color .2s,transform .2s,box-shadow .2s;text-align:left;width:100%;cursor:pointer}
+.mrow:hover{border-color:var(--ink);transform:translateY(-2px);box-shadow:0 10px 24px rgba(58,56,49,.08)}
+.mrow .n{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:26px;color:var(--faint);
+  width:52px;height:52px;border-radius:14px;background:var(--panel);border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:center;flex:none}
+.mrow h3{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:21px;margin:4px 0 6px}
+.mrow p{margin:0 0 10px;font-size:14px;color:var(--soft);max-width:64ch}
+.mrow .ls{display:flex;flex-wrap:wrap;gap:6px 14px;list-style:none;margin:0;padding:0;font-size:12.5px;color:var(--faint)}
+.mrow .cnt{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);
+  background:var(--panel);border:1px solid var(--line);padding:5px 11px;border-radius:999px;white-space:nowrap}
+@media(max-width:620px){.mrow{grid-template-columns:auto 1fr;gap:16px;padding:18px}.mrow .cnt{display:none}}
+
+/* ------------------------------- player ------------------------------- */
+.player{display:grid;grid-template-columns:340px minmax(0,1fr);gap:28px;
+  max-width:80rem;margin:0 auto;padding:30px 24px 80px;align-items:start}
+@media(max-width:980px){.player{grid-template-columns:1fr;gap:18px;padding:20px 18px 60px}}
+.rail{background:var(--panel);border:1px solid var(--line);border-radius:2rem;padding:24px 0 16px;
+  position:sticky;top:104px;max-height:calc(100vh - 124px);overflow-y:auto}
+@media(max-width:980px){.rail{position:static;max-height:none}}
+.rail::-webkit-scrollbar{width:6px}
+.rail::-webkit-scrollbar-track{background:transparent}
+.rail::-webkit-scrollbar-thumb{background:var(--line);border-radius:10px}
+.rail .up{display:block;background:none;border:0;padding:0 26px;margin:0 0 14px;color:var(--faint);
+  font-size:13px;font-weight:600;cursor:pointer;text-decoration:none}
+.rail .up:hover{color:var(--ink)}
+.rail h2{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:20px;line-height:1.25;margin:0 26px 16px}
+.rail .prog{margin:0 26px 18px}
+.rail .prog .lbl{display:flex;justify-content:space-between;font-size:12px;font-weight:600;color:var(--faint)}
+.rail .toggle{display:none}
+@media(max-width:980px){.rail .toggle{display:block;margin:0 26px 14px;background:var(--bg);
+  border:1px solid var(--line);border-radius:10px;padding:9px 14px;font-size:13px;font-weight:700;
+  color:var(--ink);cursor:pointer;width:calc(100% - 52px)}}
+.mod{border-top:1px solid var(--line-soft)}
+.mod>button{width:100%;text-align:left;background:none;border:0;padding:13px 26px;cursor:pointer;
+  display:flex;gap:12px;align-items:center;font-size:14px;font-weight:600;color:var(--soft)}
+.mod>button:hover{color:var(--ink)}
+.mod>button .cv{margin-left:auto;font-size:10px;font-weight:700;letter-spacing:.06em;color:var(--faint);
+  background:var(--bg);border:1px solid var(--line);padding:3px 8px;border-radius:999px}
+.mod.open>button{background:var(--bg);color:var(--ink);font-weight:700}
+.mod ol{list-style:none;margin:0;padding:6px 0;background:var(--bg)}
+.mod li button{width:100%;text-align:left;background:none;border:0;cursor:pointer;color:var(--soft);
+  padding:9px 26px 9px 22px;display:grid;grid-template-columns:22px 1fr auto;gap:10px;align-items:start;
+  border-left:4px solid transparent;font-size:13.5px;line-height:1.4}
+.mod li button:hover{color:var(--ink)}
+.mod li button[aria-current="true"]{border-left-color:var(--ink);color:var(--ink);font-weight:600}
+.mod li .ic{color:var(--ghost);font-size:13px;text-align:center}
+.mod li .ty{display:block;font-size:11px;font-weight:600;letter-spacing:.03em;color:var(--ghost);
+  text-transform:uppercase;margin-top:2px}
+.mod li .dn{color:var(--a1);font-size:12px;font-weight:700}
+
+.stage{background:var(--bg);border:1px solid var(--line);border-radius:2rem;padding:38px 42px 40px;min-width:0}
+@media(max-width:700px){.stage{padding:26px 22px 30px;border-radius:1.5rem}}
+.stage .crumb{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);margin:0 0 12px}
+.stage h1{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(26px,4vw,36px);
+  line-height:1.15;letter-spacing:-.02em;margin:0 0 8px}
+.stage .ltype{font-size:13px;color:var(--faint);font-weight:600;margin:0 0 28px}
+.stage h4{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:18px;margin:30px 0 10px}
+.stage p{margin:0 0 15px;max-width:66ch;color:var(--soft);line-height:1.72}
+.stage ul,.stage ol{margin:0 0 18px;padding-left:22px;max-width:66ch;color:var(--soft)}
+.stage li{margin-bottom:9px;line-height:1.65}
+.stage b,.stage strong{color:var(--ink)}
+
+.qa{border-top:1px solid var(--line-soft);padding:15px 0;max-width:66ch}
+.qa b{display:block;color:var(--ink);font-weight:700;margin-bottom:5px}
+.qa p{margin:0}
+
+.notice{background:var(--panel);border:1px solid var(--line);border-radius:1rem;padding:16px 20px;
+  margin:0 0 18px;font-size:14.5px;color:var(--soft);line-height:1.65;max-width:66ch}
+.notice.warn{background:#fff;border-left:4px solid #A8414F;border-radius:0 1rem 1rem 0}
+.notice.sun{background:var(--panel);border-left:4px solid var(--faint);border-radius:0 1rem 1rem 0}
+.notice b{color:var(--ink)}
+.notice p{margin:0 0 8px}.notice p:last-child{margin:0}
+
+.linkcard{display:block;background:var(--panel);border:1px solid var(--line);border-radius:1rem;
+  padding:16px 20px;margin:0 0 14px;text-decoration:none;max-width:66ch;transition:border-color .2s}
+.linkcard:hover{border-color:var(--ink)}
+.linkcard b{display:block;font-weight:700;margin-bottom:4px;color:var(--ink)}
+.linkcard span{font-size:14px;color:var(--soft);line-height:1.55}
+.linkcard .host{display:block;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--ghost);margin-top:9px}
+
+.vid{background:var(--panel);border:1px solid var(--line);border-radius:1.5rem;overflow:hidden;
+  margin:0 0 18px;max-width:66ch}
+
+/* click-to-play facade: nothing is requested from YouTube until this is pressed */
+.vid .fr{display:block;width:100%;background:var(--bg);border:0;border-bottom:1px solid var(--line);
+  padding:52px 24px;text-align:center;cursor:pointer;font:inherit;color:inherit;transition:background .2s}
+.vid .fr:hover{background:var(--panel)}
+.vid .fr .play{display:inline-flex;align-items:center;justify-content:center;width:68px;height:68px;
+  border-radius:999px;background:var(--panel);border:1px solid var(--line);color:var(--ink);
+  font-size:24px;padding-left:5px;transition:background .2s,transform .2s}
+.vid .fr:hover .play{background:var(--line);transform:scale(1.04)}
+.vid .fr .lb{display:block;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:16px;
+  color:var(--ink);margin-top:18px}
+.vid .fr .hint{display:block;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--ghost);margin-top:8px}
+
+/* 16:9 player, responsive */
+.vid .ratio{position:relative;width:100%;padding-top:56.25%;background:#000;
+  border-bottom:1px solid var(--line)}
+.vid .ratio iframe,.vid .ratio video{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+
+.vid .bd{padding:18px 20px 20px}
+.vid b{display:block;font-weight:700;margin-bottom:5px}
+.vid p{margin:0 0 14px;font-size:14px}
+.vid .alt{display:inline-block;background:var(--bg);border:1px solid var(--line);color:var(--ink);
+  font-weight:700;font-size:13px;padding:9px 16px;border-radius:12px;text-decoration:none}
+.vid .alt:hover{background:var(--line)}
+.vid .fallback{display:block;font-size:11.5px;color:var(--ghost);margin-top:10px;line-height:1.55}
+
+.check{list-style:none;margin:0 0 6px;padding:0;max-width:66ch;
+  background:var(--panel);border:1px solid var(--line);border-radius:1rem;overflow:hidden}
+.check li+li{border-top:1px solid var(--line-soft)}
+.check label{display:grid;grid-template-columns:22px 1fr;gap:14px;padding:14px 20px;cursor:pointer;align-items:start}
+.check input{margin:3px 0 0;width:17px;height:17px;accent-color:var(--ink);
+  background:transparent!important;border:1px solid var(--line)!important}
+.check .tx{font-size:14.5px;color:var(--ink);font-weight:600;line-height:1.5}
+.check .sub{display:block;font-size:13px;font-weight:400;color:var(--faint);margin-top:4px;line-height:1.5}
+.checksum{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--faint);margin:10px 0 22px}
+
+.tmpl{background:var(--panel);border:1px solid var(--line);border-radius:1.5rem;overflow:hidden;
+  margin:0 0 20px;max-width:66ch}
+.tmpl .hd{display:flex;align-items:center;gap:12px;padding:13px 20px;border-bottom:1px solid var(--line);
+  font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--faint)}
+.tmpl .hd button{margin-left:auto;background:var(--bg);border:1px solid var(--line);border-radius:10px;
+  padding:6px 13px;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;
+  color:var(--ink);cursor:pointer}
+.tmpl .hd button:hover{background:var(--line)}
+.tmpl pre{margin:0;padding:20px;background:var(--bg);white-space:pre-wrap;
+  font-family:'Plus Jakarta Sans',sans-serif;font-size:13.5px;line-height:1.65;color:var(--ink)}
+
+.ev{background:var(--panel);border:1px dashed var(--line);border-radius:1.5rem;padding:20px 22px;
+  margin:26px 0 8px;max-width:66ch}
+.ev p{font-size:13px;color:var(--faint);margin:0 0 12px;max-width:none}
+.ev ul{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
+.ev li{font-size:12px;font-weight:700;padding:5px 12px;border-radius:999px;background:var(--bg);
+  border:1px solid var(--line);color:var(--ink);margin:0}
+.ev li.a1{border-left:4px solid var(--a1)}.ev li.a2{border-left:4px solid var(--a2)}
+.ev li.a3{border-left:4px solid var(--a3)}.ev li.a4{border-left:4px solid var(--a4)}
+
+.navrow{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:38px;padding-top:26px;
+  border-top:1px solid var(--line)}
+.navrow .sp{flex:1}
+.navrow button{background:var(--panel);border:1px solid var(--line);color:var(--ink);font-weight:700;
+  font-size:14px;padding:12px 20px;border-radius:12px;cursor:pointer}
+.navrow button:hover:not(:disabled){background:var(--line)}
+.navrow button:disabled{opacity:.4;cursor:default}
+.navrow .mark[data-done="1"]{background:var(--bg);color:var(--faint)}
+
+/* ------------------------------- footer ------------------------------- */
+footer.site{border-top:1px solid var(--line);background:var(--bg);padding:56px 0 40px;color:var(--faint)}
+footer.site .cols{max-width:80rem;margin:0 auto;padding:0 24px;display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:40px;font-size:14px}
+footer.site h4{font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--ink);margin:0 0 14px}
+footer.site ul{list-style:none;margin:0;padding:0}
+footer.site li{margin-bottom:10px}
+footer.site a{text-decoration:none}
+footer.site a:hover{color:var(--ink)}
+footer.site .brandline{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+footer.site .brandline .sq{width:40px;height:40px;border-radius:12px;background:var(--panel);
+  border:1px solid var(--line);display:flex;align-items:center;justify-content:center;
+  font-weight:700;font-size:18px;color:var(--ink)}
+footer.site .legal{max-width:80rem;margin:40px auto 0;padding:24px 24px 0;border-top:1px solid var(--line)}
+footer.site .legal p{font-size:12px;line-height:1.65;color:var(--ghost);max-width:88ch;margin:0 0 10px}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script>
+/* AurinkoLab kurssitiedot. Ohjelman tiedot tarkistettu osoitteesta erasmus-entrepreneurs.eu, syyskuussa 2026. */
+"use strict";
+
+var OFFICIAL = {
+  home:  "https://www.erasmus-entrepreneurs.eu/",
+  about: "https://www.erasmus-entrepreneurs.eu/page.php?cid=20",
+  who:   "https://www.erasmus-entrepreneurs.eu/page.php?cid=3",
+  how:   "https://www.erasmus-entrepreneurs.eu/page.php?cid=4",
+  neprof:"https://www.erasmus-entrepreneurs.eu/page.php?pid=08",
+  neact: "https://www.erasmus-entrepreneurs.eu/page.php?pid=004",
+  money: "https://www.erasmus-entrepreneurs.eu/page.php?pid=005",
+  heprof:"https://www.erasmus-entrepreneurs.eu/page.php?pid=09",
+  prac:  "https://www.erasmus-entrepreneurs.eu/page.php?pid=014",
+  contr: "https://www.erasmus-entrepreneurs.eu/page.php?pid=015",
+  lcp:   "https://www.erasmus-entrepreneurs.eu/page.php?cid=5",
+  faq:   "https://www.erasmus-entrepreneurs.eu/page.php?cid=6",
+  apply: "https://www.erasmus-entrepreneurs.eu/page.php?cid=19",
+  tool:  "https://webgate.ec.europa.eu/erasmus-entrepreneurs/",
+  stories:"https://www.erasmus-entrepreneurs.eu/page.php?cid=9",
+  matls: "https://www.erasmus-entrepreneurs.eu/page.php?cid=25",
+  help:  "https://supportoffice.erasmus-entrepreneurs.eu/portal/en/kb",
+  video: "https://www.youtube.com/watch?v=FtLvelrD6UM",
+  videoId: "FtLvelrD6UM",   /* käytetään sivun sisäisessä soittimessa */
+  chan:  "https://www.youtube.com/user/ErasmusEntrepreneurs"
+};
+
+var COURSE = {
+  id: "eye",
+  title: "Erasmus nuorille yrittäjille",
+  subtitle: "Itsenäinen valmistautuminen henkilöille, jotka aloittavat ilman aiempaa yritystä tai työtä, johon palata",
+  lede: "Ohjelma lähettää sinut työskentelemään kokeneen yrittäjän rinnalle toiseen osallistujamaahan 1–6 kuukaudeksi kuukausittaisen elinkustannustuen turvin. Ohjelmaan pääsy riippuu lähes täysin liiketoimintasuunnitelmasi laadusta ja sopivuudestasi isännälle. Tämä kurssi valmistaa molempiin. Se ei hae puolestasi eikä se ole itse vaihto-ohjelma.",
+  forWhom: [
+    "Olet työtön tai vaarassa jäädä työttömäksi, ja oman yrityksen perustaminen on vakavasti harkinnassa.",
+    "Sinulla on liikeidea tai puoliksi valmis ajatus, mutta ei liikehistoriaa.",
+    "Olet pyörittänyt yritystä alle kolme vuotta ja haluat oppia pidemmällä olevalta.",
+    "Olet yli 18-vuotias ja osallistujamaan pysyvä asukas."
+  ],
+  notFor: [
+    "Haluat töihin ulkomaille. Tämä ei ole työsuhde, eikä isäntä voi käyttää sinua tavallisena työntekijänä.",
+    "Haluat jonkun hoitavan hakemuksen puolestasi. Kukaan muu ei saa lähettää sitä puolestasi.",
+    "Tarvitset rahaa elämiseen kotimaassa. Tuki kattaa vain ulkomaanjakson, eikä aina sitäkään kokonaan."
+  ],
+  facts: [
+    ["Hinta", "Maksuton. Ei koskaan maksuja"],
+    ["Kesto", "1–6 kuukautta ulkomailla"],
+    ["Kurssin kesto", "Noin 6 tuntia"],
+    ["Yrityskerrat", "Ohjelmaan voi osallistua vain kerran"],
+    ["Järjestäjä", "AurinkoLab ry, Helsinki"]
+  ],
+
+  modules: [
+  /* ============================== 1 ============================== */
+  { n:1, title:"Aloita tästä", blurb:"Mikä ohjelma on, mikä tämä kurssi on, ja se osuus jota kukaan ei kerro ennen kuin myöhemmin.",
+    lessons:[
+    { id:"1.1", title:"Kenelle tämä kurssi on tarkoitettu", type:"reading", dur:"5 min", blocks:[
+      {p:"Suurin osa Erasmus nuorille yrittäjille -ohjelman materiaaleista on kirjoitettu ihmisille, joilla on jo yritys, kirjanpitäjä ja selvä syy laajentaa toimintaa. Tämä kurssi on tehty jollekin, joka on varhaisemmassa vaiheessa: ei työtä, liikeidea joka ei ehkä selviä kontaktista asiakkaan kanssa, ja aito pohdinta siitä, onko uuden aloittaminen järkevää vai piittaamatonta."},
+      {p:"Tämä varhainen vaihe ei ole hylkäysperuste. Ohjelma hyväksyy nimenomaan ihmisiä, jotka eivät ole vielä aloittaneet, kunhan suunnitelma on elinkelpoinen. Se tarkoittaa kuitenkin sitä, että kolme asiaa ratkaisee, toimiiko tämä sinulle, ja vain yksi niistä liittyy papereihin."},
+      {ol:[
+        "Pystytkö kirjoittamaan liiketoimintasuunnitelman, jota kymmeniä hakemuksia arvioiva tuntematon henkilö pitää vakuuttavana.",
+        "Löydätkö isännän, jonka yritys aidosti tarvitsee tuomaasi osaamista, etkä vain sellaista, joka sietää läsnäoloasi.",
+        "Pystytkö kattamaan kuukausittaisen tuotteen ja ulkomailla asumisen todellisten kustannusten välisen erotuksen."
+      ]},
+      {p:"Kurssi käyttää suurimman osan ajastaan kahteen ensimmäiseen kohtaan, koska niihin voi itse vaikuttaa. Kolmas on puhdasta matematiikkaa, ja moduuli 1 käsittelee sen ajoissa ja rehellisesti eikä vasta lopussa."},
+      {note:"Mikään tässä materiaalissa ei korvaa ohjelman virallisia verkkosivuja. Säännöt muuttuvat, ja virallinen teksti on aina ensisijainen. Jokainen moduuli ohjaa sinut vastaavalle viralliselle sivulle, jotta voit tarkistaa asian itse."}
+    ]},
+
+    { id:"1.2", title:"Mitä AurinkoLab tekee ja mitä se ei tee", type:"reading", dur:"4 min", blocks:[
+      {p:"AurinkoLab ry on suomalainen voittoa tavoittelematon yhdistys, joka suunnittelee ja järjestää epävirallisia oppimisohjelmia. Emme ole osa Erasmus nuorille yrittäjille -ohjelmaa. Emme ole paikallinen yhteyspiste, meillä ei ole roolia hakemusten arvioinnissa tai välittämisessä, eikä meillä ole suhdetta Euroopan komissioon."},
+      {warn:"<b>Sinun on lähetettävä oma hakemuksesi itse.</b> Ohjelman säännöt edellyttävät, että yrittäjät lähettävät hakemuksensa henkilökohtaisesti virallisen ohjelma-alustan kautta, eikä ulkopuolisten tahojen kautta tehtyjä hakemuksia hyväksytä. Muu toiminta voi johtaa ohjelmasta sulkemiseen ja mahdollisesti maksetun tuuen takaisinperintään. Jos jokin organisaatio, me mukaan lukien, tarjoutuu hakemaan puolestasi, kieltäydy."},
+      {p:"Ohjelmaan hakeutuminen ja osallistuminen on maksutonta. Ohjelma määrää, että mikään organisaatio ei saa periä haku- tai osallistumismaksuja. Jos sinulta pyydetään maksua osallistumisesta, jokin on pielessä."},
+      {h:"Mikä tämä kurssi sitten on?"},
+      {ul:[
+        "Valmistautumista. Lukemista, luonnostelua ja kustannusten tarkistamista, jotka muuten tekisit huonosti ajan painaessa päälle.",
+        "Tallenne siitä mitä teit. Jokainen moduuli kertoo, mitä näyttöä työ tuottaa, joten valmistut konkreettisten tuotosten kanssa pelkän osallistumistodistuksen sijaan.",
+        "Linkit virallisille sivuille siinä järjestyksessä kuin niitä tarvitset."
+      ]},
+      {p:"Mitä tämä ei ole: haku- tai kelpoisuusarviointi, hyväksymistakuu tai neuvontaa tuista. Jos kysymys vaatii viranomaista, kerromme mikä viranomainen se on."}
+    ]},
+
+    { id:"1.3", title:"Ohjelman toteuttajien kuvaus ohjelmasta", type:"video", dur:"3 min", blocks:[
+      {p:"Ennen yksityiskohtia kuule virallinen tiivistelmä. Se on lyhyt ja antaa sinulle kokonaiskuvan: kaksi yrittäjää, yksi vaihto, kustannustukea, ja laaja verkosto sen jälkeen."},
+      {vid:{yt:"FtLvelrD6UM", href:"VIDEO", title:"Erasmus nuorille yrittäjille -ohjelma",
+        desc:"Ohjelman virallinen esittelyvideo, jonka ohjelma itse on julkaissut. Se toistetaan tällä sivulla."}},
+      {link:{href:"CHAN", title:"Virallinen ohjelmakanava", desc:"Maakohtaisia infotilaisuuksia ja osallistujien kokemuksia, myös muilla kielillä kuin englanniksi."}},
+      {p:"Kiinnitä huomiota yhteen asiaan: kuinka usein käytetty sana on yhteistyö koulutuksen sijaan. Sillä erolla on merkitystä myöhemmin, koska harjoittelulta näyttävä vaihto ei ole tukikelpoinen."}
+    ]},
+
+    { id:"1.4", title:"Rehellistä matematiikkaa", type:"reading", dur:"8 min", blocks:[
+      {p:"Taloudellinen tuki on avustus matka- ja elinkustannuksiin ulkomailla oleskelun aikana. Se lasketaan kuukausittain oleskelumaalle määritetyn kiinteän summan perusteella, ja sen maksaa valitsemasi paikallinen yhteyspiste teidän kahden allekirjoittaman sopimuksen mukaisesti."},
+      {p:"Tästä seuraa kolme asiaa, jotka ihmiset huomaavat aivan liian myöhään."},
+      {h:"Tuki maksetaan vain ulkomailla vietetystä ajasta"},
+      {p:"Tuki kattaa vain sen ajan, jonka olet todellisuudessa isännän luona. Valmistelut kotona, mahdollisen isännän tapaamismatka tai paluuta seuraava kuukausi: mikään näistä ei kuulu tuen piiriin."},
+      {h:"Sitä ei ole suunniteltu kattamaan kaikkea"},
+      {p:"Ohjelma edellyttää uusien yrittäjien olevan valmiita täydentämään ohjelman varoja tarpeen mukaan oleskelun kustannusten kattamiseksi. Tämä on selkeä kelpoisuusehto, ei mikään pikkupräntillä oleva varoitus. Laske ennen pidemmälle etenemistä, mitä kuukausi todennäköisessä kohdemaassasi maksaa ja mistä erotus tulee."},
+      {link:{href:"MONEY", title:"Kuukausittainen taloudellinen tuki kohdemaittain", desc:"Viralliset summat ja ainoa paikka lukea ne. Luvut tarkistetaan, joten muualla mainitut luvut saattavat olla vanhentuneita."}},
+      {note:"Tämä kurssi ei tahallaan mainitse summia numeroina. Opiskelumateriaaliin kopioitu luku vanhenee nopeasti, ja puoliksi muistamasi luku kurssilta on huonompi kuin ei lukua lainkaan. Avaa virallinen taulukko ja kirjaa muistiin kohdemaasi luku päivämäärän kera."},
+      {h:"Jos saat työttömyysetuutta, kysy ensin"},
+      {p:"Voitko osallistua etuutta saadessasi, mitä sille tapahtuu ulkomailla ollessasi ja onko starttiraha sen sijaan mahdollinen, ovat oman työllisyysviranomaisesi ja etuuslaitoksesi kysymyksiä. Suomessa tämä tarkoittaa paikallisia työllisyyspalveluja ja Kelaa. Kysy nimenomaan 1–6 kuukauden EU-vaihdosta ulkomailla ja kysy starttirahasta samassa keskustelussa."},
+      {warn:"Hanki tämä vastaus kirjallisena ennen kuin sitoudut päivämääriin. Kukaan ohjelmassa tai AurinkoLabissa ei voi kertoa, miten etuuteesi suhtaudutaan. Sen voi tehdä vain etuuden maksava taho."},
+      {ev:[["2.4","Taloudellinen lukutaito"],["3.3","Epävarmuus ja riski"]]}
+    ]}
+  ]},
+
+  /* ============================== 2 ============================== */
+  { n:2, title:"Voitko osallistua?", blurb:"Kaksi reittiä mukaan, niihin liittyvät ehdot ja suhteet, jotka tekevät vaihdosta tukikelvottoman.",
+    lessons:[
+    { id:"2.1", title:"Kaksi reittiä sisään", type:"reading", dur:"5 min", blocks:[
+      {p:"Voit osallistua uutena yrittäjänä jommankumman kahden perusteen kautta. Tarvitset vain yhden."},
+      {ol:[
+        "Suunnittelet yrityksen perustamista tiukasti elinkelpoisen liiketoimintasuunnitelman pohjalta.",
+        "Sinulla on alle kolme vuotta kokonaiskokemusta yrittäjyydestä."
+      ]},
+      {p:"Ensimmäinen reitti on se, jota useimmat tämän kurssin kävijät käyttävät, ja on huomionarvoista, kuinka paljon painoarvoa se laskee yhdelle ainoalle asiakirjalle. Jos et ole vielä aloittanut myyntiä, suunnitelma on ainoa todiste siitä, että suunnittelet mitään tosissasi."},
+      {p:"Toimialalla ei ole väliä. Yläikärajaa ei ole, vaikka kaikkien osallistujien on oltava yli 18-vuotiaita. Toinen reitti mitataan kokonaisyrittäjyyskokemuksena, joten aika aiemmin pyörittämässäsi ja sittemmin lakkauttamassasi yrityksessä lasketaan yhä mukaan kolmeen vuoteen."},
+      {link:{href:"NEPROF", title:"Uuden yrittäjän profiili, viralliset kriteerit", desc:"Lähde kummallekin reitille ja seuraavan oppitunnin ehdoille. Lue itse sen sijaan että luottaisit tähän tiivistelmään."}}
+    ]},
+
+    { id:"2.2", title:"Reittien taustalla olevat ehdot", type:"checklist", dur:"6 min", blocks:[
+      {p:"Toisen reitin täyttäminen ei vielä riitä yksinään. Ohjelma asettaa lisäehtoja jokaiselle uudelle yrittäjälle. Käy ne rehellisesti läpi. Ei-vastaus tässä vaiheessa on tietoa eikä epäonnistumista, ja se on paljon halvempaa nyt kuin neljäntenä kuukautena."},
+      {check:{id:"c2-2", items:[
+        {t:"Olen yli 18-vuotias.", s:"Yläikärajaa ei ole, mutta tämä alaraja on ehdoton."},
+        {t:"Olen osallistujamaan pysyvä asukas.", s:"Asuinpaikka, ei kansalaisuus. Virallinen osallistujamaiden lista on auktoriteetti; tarkista se oletusten sijaan."},
+        {t:"Minulla on konkreettinen projekti tai liikeidea, joka näkyy liiketoimintasuunnitelmassa.", s:"'Näkyy suunnitelmassa' on avainlause. Ääneen kuvailtu idea ei ole vielä tätä."},
+        {t:"Olen valmis panostamaan isännän yritykseen, en vain oppimaan siltä.", s:"Oman osaamisen ja valmiuksien tuominen käyttöön odotetaan. Isäntä, joka ei saa vaihdosta mitään, on epäonnistunut pari."},
+        {t:"Pystyn täydentämään ohjelman varoja kattaakseni oleskeluni todelliset kustannukset.", s:"Ilmoitettu ehto. Moduuli 1.4 laskee luvun."},
+        {t:"Olen valmis sitoutumaan 1–6 kuukauteen poissa kotoa.", s:"Mukaan lukien se, mitä muuten tekisit noina kuukausina."}
+      ]},
+      {p:"Jos asuinpaikka tai rahoitus on kohta, johon et voi laittaa ruksia, pysähdy ja ratkaise se ennen kuin kirjoitat mitään. Molemmat ovat ehdottomia, eikä vahvempi liiketoimintasuunnitelma paranna kumpaakaan."}
+    ]},
+
+    { id:"2.3", title:"Mikä tekee vaihdosta tukikelvottoman", type:"reading", dur:"7 min", blocks:[
+      {p:"Voit olla täysin kelpoinen henkilö ja silti ehdottaa vaihtoa, joka hylätään, koska säännöt säätelevät kahden yrittäjän välistä suhdetta aivan yhtä paljon kuin itse yrittäjiä. Taustalla oleva periaate on, että vaihdon on tuotava lisäarvoa, jota ei olisi muuten tapahtunut."},
+      {h:"Suhteet, joita ei sallita"},
+      {ul:[
+        "Isäntä, joka on tai josta tulee yrityksesi osaomistaja tai sijoittaja.",
+        "Vaihto, jossa aiot avata isännän yrityksen sivuliikkeen.",
+        "Isäntä, jonka tiloihin pääsit jo jonkin toisen ohjelman tai stipendin kautta.",
+        "Perhe: sukulaiset, puolisot, kumppanit tai kumppanien perheenjäsenet.",
+        "Mikä tahansa aiempi tai suunniteltu liike- tai ammatillinen suhde, joka tekisi vaihdosta tarpeettoman."
+      ]},
+      {h:"Tarkoitukset, joita ei sallita"},
+      {p:"Isäntien on tarjottava aitoa yrittäjyysyhteistyötä, eivätkä he saa käyttää vaihtoa palkattoman työvoiman lähteenä tai harjoittelupaikkana. Sinun puoleltasi vaihdon on tuettava liiketoiminnan johtamistaitojen kartuttamista. Se ei voi olla ammatillista koulutusta, harjoittelua tai jatkoa työpaikalle, jonka jo tunnet."},
+      {p:"On olemassa vielä yksi sääntö, joka kannattaa tietää, jos olet syntynyt muualla: sinua ei ole estetty lähtemästä vaihtoon maahan, johon sinulla on aiempi yhteys opintojen tai vierailujen kautta. Ohjelmaa ei kuitenkaan saa väärinkäyttää, esimerkiksi palaamalla pelkästään kotimaahasi tai paikkaan, jossa viettit vastikään pitkän ajan. Tapaukset arvioidaan erikseen."},
+      {warn:"Helpoin tapa tuhlata ainoa yrityksesi on järjestää mukava sijoitus jonkun ennestään tutun kanssa ja huomata sitten, että se on tukikelvoton. Jos sinulla on jo mielessäsi mahdollinen isäntä, tarkista tämä oppitunti tuota suhdetta vasten ennen kuin sijoitat asiaan enempää."},
+      {link:{href:"ABOUT", title:"Ohjelman säännökset kelpoisuudesta, tarkoituksesta ja eturistiriidoista", desc:"Virallinen lausunto kaikista yllä olevista rajoituksista, mukaan lukien yhteyspisteen henkilöstön eturistiriitasäännöt."}}
+    ]},
+
+    { id:"2.4", title:"Saat yhden yrityksen", type:"reading", dur:"3 min", blocks:[
+      {p:"Uudet yrittäjät voivat osallistua ohjelmaan kerran. Ei kerran yritystä kohti, ei kerran maata kohti. Vain kerran."},
+      {p:"Tämän yksittäisen faktan pitäisi muuttaa tapaa, jolla lähestyt loppua kurssista. Keskinkertaisen parin hinta ei ole muutama hukattu kuukausi; se on vaihtoehdon pysyvä menetys. On useamman lisäviikon valmistelun, useamman isäntäkeskustelun ja pelkän saatavilla olevan isännän hylkäämisen arvoista."},
+      {p:"Se puoltaa myös myöhemmin lähtemistä ennemmin kuin liian aikaisin. Idean ollessa yhä epämääräinen tehty vaihto muuttaa ainoan yrityksen yleiseksi yrittäjyskoulutukseksi, jonka voit saada muualtakin. Otettuna silloin, kun sinulla on selvä aukko, tarvitsemasi nimetty taito ja isäntä, jolla se on, samat kuukaudet ovat huomattavasti arvokkaampia."},
+      {ev:[["1.3","Visio"],["3.3","Epävarmuus ja riski"]]}
+    ]},
+
+    { id:"2.5", title:"Missä todellisuudessa seisot", type:"checklist", dur:"5 min", blocks:[
+      {p:"Lyhyt tilannekatsaus ennen luonnostelun aloittamista. Merkitse vain se, mikä pitää paikkansa tänään, ei sitä, mikä on totta asioiden mennessä hyvin."},
+      {check:{id:"c2-5", items:[
+        {t:"Olen lukenut uuden yrittäjän viralliset kriteerit itse.", s:"En tiivistelmää. Linkitetty sivu kohdassa 2.1."},
+        {t:"Olen vahvistanut maani olevan osallistujaluettelossa.", s:""},
+        {t:"Tiedän, minkä kahden reitin kautta täytän ehdot.", s:"Suunnittelen aloittamista elinkelpoisella suunnitelmalla tai minulla on alle kolme vuotta kokemusta."},
+        {t:"Olen tarkistanut aiotun isäntäsuhteeni tukikelvottomien listaa vasten.", s:"Tai minulla ei vielä ole isäntäehdokasta, mikä on tässä vaiheessa ok."},
+        {t:"Minulla on vastaus kirjallisena etuustilanteestani.", s:"Tai etuudet eivät koske minua."},
+        {t:"Tiedän todennäköisen kohdemaani kuukausisumman ja päivämäärän, jolloin luin sen.", s:""},
+        {t:"Tiedän, mistä kyseisen summan ja todellisten kustannusten välinen vaje tulee.", s:"Säästöt, perhe, etätyö tai suunnitelma ei vielä sulkeudu."}
+      ]},
+      {p:"Kuusi tai seitsemän ruksia tarkoittaa siirtymistä moduuliin 3 ja kirjoittamisen aloittamista. Kolme tai neljä tarkoittaa, että aukot ovat käytännön asioita eivätkä liity itse ideaan, ja ne kannattaa sulkea ensin, koska mikään luonnostelun määrä ei korjaa niitä."}
+    ]}
+  ]},
+
+  /* ============================== 3 ============================== */
+  { n:3, title:"Liiketoimintasuunnitelma on portti", blurb:"Hakemukset seulotaan laadun mukaan. Tämä moduuli käsittelee sellaisen suunnitelman tuottamista, joka läpäisee seulan ilman aiempaa myyntihistoriaa.",
+    lessons:[
+    { id:"3.1", title:"Miksi hakemuksia hylätään", type:"reading", dur:"5 min", blocks:[
+      {p:"Ohjelma ilmoittaa, että vain laatuvaatimukset täyttävät, vankat ja hyvin kehitetyt hakemukset voidaan hyväksyä, ja se julkaisee toimintaohjeet sen mukaisesti. Lue se niin kuin se on tarkoitettu: täydellinen hakemus ei tarkoita hyväksyttyä hakemusta."},
+      {p:"Henkilölle, jolla ei ole myyntihistoriaa, yleinen virhe ei ole huono idea. Se on kokonaan aikomuksista koostuva suunnitelma. Jokainen lause kuvaa sitä, mitä tulee tapahtumaan, mikään ei kuvaa sitä, mitä on tapahtunut, eikä arvioitsijalla ole keinoa erottaa sitä pöydän muusta kahdestakymmenestä suunnitelmasta, jotka myös kuvaavat tulevaa."},
+      {h:"Mikä erottaa nämä kaksi toisistaan"},
+      {ul:[
+        "Piirisi ulkopuolelta nimetty henkilö, joka on sanonut ostavansa, käyttävänsä tai maksavansa asiasta, ja mitä hän sanoi.",
+        "Kustannusluku lähteen ja päivämäärän kera arvion sijaan.",
+        "Kuvaus jostakin yrittämästäsi asiasta, joka ei toiminut, ja siitä mitä muutit.",
+        "Tietty aukko omassa osaamisessasi nimettynä sellaisenaan, jota varten vaihto on."
+      ]},
+      {p:"Viimeinen hoitaa kaksi asiaa kerralla. Se tekee suunnitelmasta uskottavan ja vastauskysymyksestä ilmeisen: tässä on aukko, tällä isännällä on se, siksi tämä vaihto eikä kurssi."},
+      {link:{href:"APPLY", title:"Hakemuksen jättämisohjeet", desc:"Virallinen ohjeistus siitä, mitä hakemuksen on sisällettävä ja millaista standardia vasten sitä arvioidaan."}}
+    ]},
+
+    { id:"3.2", title:"Mitä suunnitelma sisältää, kun et ole koskaan myynyt mitään", type:"reading", dur:"8 min", blocks:[
+      {p:"Sinulta ei pyydetä sijoittajaesitystä, ja viiden vuoden liikevaihtoennusteiden keksiminen tyhjästä vahingoittaa sinua auttamisen sijaan. Seuraavassa on rakenne, joka toimii silloin, kun rehellinen vastaus useimpiin taloudellisiin kysymyksiin ei ole vielä tiedossa."},
+      {h:"Ongelma jonkun muun sanoin"},
+      {p:"Aloita ongelmalla sellaisena kuin todellinen ihminen sen kuvaili, mieluiten rooliin nimettömänä. Tämä on vahvin mahdollinen aloitus tulottomalle henkilölle, koska se on se osuus suunnitelmasta, jonka voit todentaa kokonaan."},
+      {h:"Mitä tekisit asialle"},
+      {p:"Riittävän konkreettisesti, että lukija voi kuvitella ensimmäisen siirron. Mitä ostetaan, kuka ostaa, suurin piirtein millä summalla ja miten toimitetaan."},
+      {h:"Mitä yhden tuotteen tai palvelun toimittaminen maksaa"},
+      {p:"Yksikkökustannukset lähteineen. Ei koko yrityksen budjetti, vaan yhden toimituksen. Tämä on se osa, jonka useimmat ensisuunnitelmat ohittavat ja jota useimmat arvioitsijat etsivät, koska se osoittaa, oletko koskettanut todellista maailmaa."},
+      {h:"Kuka muu tekee tätä ja miksi et ole he"},
+      {p:"Nimeä todelliset kilpailijat. Väite, ettei niitä ole, luetaan merkiksi siitä, ettei ole katsottu. Jos niitä on ja ne ovat paremmin rahoitettuja, kerro mitä sinulle jää jäljelle."},
+      {h:"Mitä et osaa vielä"},
+      {p:"Osaamisaukko kerrottuna suoraan. Sitten vaihto vastauksena siihen. Suunnitelma, joka myöntää aukon ja ehdottaa tiettyä korjausta, on vakuuttavampi kuin täydellisyyttä väittävä, ja se on perustelu hakemuksellesi eikä pelkästään yrityksellesi."},
+      {h:"Mitä tapahtuu vaihdon jälkeisenä ensimmäisenä puolen vuoden aikana"},
+      {p:"Lyhyt, päivätty ja tarpeeksi pieni uskottavaksi. Kolme asiaa, jotka teet kuukausien kera."},
+      {note:"Kirjoita se ensin omalla kielelläsi, jos englanti ei ole äidinkielesi. Tarkka suomenkielinen suunnitelma ja sen kääntäminen on parempi kuin epämääräinen englanninkielinen versio siksi, että epämääräisyys oli helpompaa."}
+    ]},
+
+    { id:"3.3", title:"Kaksi viikkoa asiakasnäyttöä", type:"reading", dur:"7 min", blocks:[
+      {p:"Tämä on tuotoltaan korkein mahdollinen kahden viikon jakso, eikä se maksa mitään muuta kuin epämukavuutta. Tavoitteena on korvata suunnitelmasi aikeet asioilla, joita on tapahtunut."},
+      {h:"Päivät yksi–neljä: löydä ongelma, älä myy"},
+      {p:"Puhu kymmenelle ihmiselle, joilla on kyseinen ongelma. Ei ystäville, ei perheelle, ei ihmisille, jotka haluavat sinun menestyvän. Kysy, mitä he tekevät asialle tällä hetkellä ja mitä se maksaa heille rahassa tai ajassa. Älä kuvaile ideaasi; et ole myymässä, ja sen kuvaileminen muuttaa heidän vastauksiaan."},
+      {p:"Kirjoita muistiin yksityiskohta, joka sotii ideaasi vastaan. Se lause on koko harjoituksen tarkoitus ja se asia, jonka useimmat jättävät pois."},
+      {h:"Päivät viisi–kahdeksan: hinnoittele se oikein"},
+      {p:"Hanki kolme todellista tarjousta todellisilta toimittajilta kaikelle sille, mitä tarvitset yhden yksikön toimittamiseen. Ei hakutulosta, ei muistikuvaa. Sähköposti, jossa on luku. Kirjaa ylös jokaisen päivämäärä, koska kustannukset liikkuvat eikä päiväyksetön luku ole näyttö."},
+      {h:"Päivät yhdeksän–kahtoista: tee yksi pieni asia yhdelle ihmiselle"},
+      {p:"Toimita jotain aidosti hyödyllistä yhdelle piirisi ulkopuoliselle henkilölle ilmaiseksi ja pyydä häntä kirjoittamaan lause siitä, oliko siitä hyötyä. Tämä on tarkoituksella pieni. Se muuttaa sinut suunnitelman omaavasta henkilöstä toimittaneeksi, ja kyseinen lause päätyy hakemukseesi."},
+      {h:"Päivät kolmetoista ja neljätoista: kirjoita puhtaaksi"},
+      {p:"Kymmenen keskustelua, kolme tarjousta, yksi toimitus, yksi kirjallinen palaute. Se on suunnitelma, jolla on perusta, ja se kesti kaksi viikkoa."},
+      {ev:[["1.1","Tilaisuuksien havaitseminen"],["1.4","Ideoiden arvottaminen"],["2.4","Taloudellinen lukutaito"],["4.1","Näkyvyys"],["3.1","Aloitekyky"]]}
+    ]},
+
+    { id:"3.4", title:"Yhden toimituksen kustannuslaskelma", type:"template", dur:"6 min", blocks:[
+      {p:"Kopioi tämä, täytä se hankituilla luvuilla ja säilytä se suunnitelmasi liitteenä. Päivämäärät eivät ole koriste: arvioitsija osaa erottaa viime viikolla tehdyn laskelman ulkomuistista kootusta."},
+      {tmpl:{title:"Yksikkökustannuslomake", text:
+"MITÄ YKSI TOIMITUS ON\nKuvaile yksittäinen asia, jonka asiakas saa:\n\nSUORAT KUSTANNUKSET\nNimike | Kustannus | Lähde (kuka tarjosi) | Tarjouspäivä\n------ | --------- | ------------------- | -----------\n       |           |                     |\n       |           |                     |\n       |           |                     |\n\nOMA AIKANI\nTunnit yhden toimittamiseen:\nMitä arvostan tunnin hinnaksi ja miksi:\n\nYHDEN TOIMITUKSEN KUSTANNUKSET YHTEENSÄ:\n\nMITÄ LUULEN JONKIN MAKSAVAN\nKuka kertoi minulle niin ja milloin:\n\nKATE TOIMITUSTA KOHDEN:\nTOIMITUKSET KUUKAUDESSA OMIEN KUSTANNUSTEN KATTAMISEKSI:\n\nLUKU, JOKA ON EPÄVARMIN\nMitä vaatisi sen varmistamiseksi:\n\nVOIMASSA: (12 kuukautta vanhimmasta yllä olevasta tarjouksesta)"}},
+      {p:"Kaksi viimeistä riviä ovat ne, jotka kannattaa pitää. Epävarmimman luvun nimeäminen on sitä, mitä pätevä perustaja tekee, ja sen tekeminen suunnitelmassa sen sijaan, että odottaisi kysyttävän, viestii luottamuksesta epäilyksen sijaan."},
+      {ev:[["2.4","Taloudellinen lukutaito"],["3.2","Suunnittelu"]]}
+    ]},
+
+    { id:"3.5", title:"Liiketoimintasuunnitelman runko", type:"template", dur:"6 min", blocks:[
+      {p:"Moduulin 3.2 mukainen runko, mitoitettu henkilölle, jolla ei ole kaupataustaa. Tavoittele neljää–kuutta sivua. Pitempi ei lue perusteellisempana; se näyttää täytteeltä."},
+      {tmpl:{title:"Liiketoimintasuunnitelman runko", text:
+"1. ONGELMA\n   - Kuten jollakin sen omaavalla kuvattuna (sitaatti tai tarkka parafraasi)\n   - Kuinka monella ihmisellä se mahdollisesti on ja mistä tiedät sen\n   - Mitä he tekevät asialle nyt ja mitä se heille maksaa\n\n2. MITÄ TEKISIN ASIALLE\n   - Tarjous konkreettisesti\n   - Ensimmäinen transaktio alusta loppuun kuvattuna\n   - Mikä on tarkoituksella rajattu ulkopuolelle\n\n3. NÄYTTÖ TÄHÄN MENNESSÄ\n   - Käydyt keskustelut: kuinka monen kanssa, keiden (roolin mukaan), mikä yllätti minut\n   - Mitä yritin, mikä ei toiminut ja mitä muutin\n   - Mitä olen jo toimittanut ja mitä vastaanottaja sanoi\n\n4. LUVUT\n   - Yhden toimituksen kustannukset (liite: yksikkökustannuslomake)\n   - Hinta ja kuka ilmaisi maksavansa sen\n   - Mitä tarvitsen kuukaudessa jatkaakseni\n   - Oletus, joka rikkoo tämän, jos se on väärin\n\n5. MARKKINAT JA KUKA MUU ON MUKANA\n   - Nimetyt kilpailijat tai korvikkeet\n   - Mitä minulle rehellisesti jää jäljelle\n   - MITÄ EN VIELÄ OSAA\n\n6. Erityinen kyvykkyysaukko\n   - Miksi vaihto vastaa siihen paremmin kuin kurssi tai palkkaus\n   - Millainen isäntäyritys sen toisi mukanaan\n\n7. VAIHDON JÄLKEEN\n   - Kolme asiaa kuukausien kera\n   - Mistä tiedän kuuden kuukauden kuluessa, toimiiko tämä\n\nLIITTEET\n   - Yksikkökustannuslomake\n   - Henkilön kirjallinen palaute toimituksesta\n   - CV"}},
+      {note:"Osio 6 on se, joka muuttaa liiketoimintasuunnitelman hakemukseksi. Useimmat hakijat jättävät suunnitelman, joka olisi identtinen riippumatta siitä, oliko ohjelmaa olemassa. Sinun ei pitäisi olla."}
+    ]}
+  ]},
+
+  /* ============================== 4 ============================== */
+  { n:4, title:"Isännän etsiminen", blurb:"Miten parinhaku toimii käytännössä, kuinka valita ja kuinka kirjoittaa ratkaiseva viesti.",
+    lessons:[
+    { id:"4.1", title:"Miten parinhaku oikeasti toimii", type:"reading", dur:"6 min", blocks:[
+      {p:"Kun rekisteröintisi on hyväksytty, luot suhteen ulkomailla olevaan isäntään jomallakummalla tavalla. Voit ehdottaa paikalliselle yhteyspisteellesi isäntää, jonka kanssa olet jo yhteydessä, tai selata verkkoluetteloa yhteyspisteen avustuksella. Yhteyspisteet voivat myös helpottaa kontakteja ja ehdottaa paria."},
+      {p:"Tuosta kuvauksesta seuraa kaksi asiaa, jotka on helppo ohittaa."},
+      {ul:[
+        "Hyväksyntä ohjelmaan ei tarkoita paria. Jotkut hyväksytään, eivätkä he koskaan löydä isäntää. Luettelo ei ole jono, joka saavuttaa sinut aikanaan.",
+        "Yhteyspiste on työsuhde, ei hallinnollinen vaihe. He näkevät luettelon, tietävät mitkä isännät vastaavat ja allekirjoittavat rahoitussopimuksesi. Valitse alueesi kattava ja aidosti osallistuva."
+      ]},
+      {p:"Moduulin 2.3 kelpoisuussäännöt koskevat mitä tahansa ehdottamaasi. Vaihto voidaan hylätä, jos se ei ole kriteerien mukainen, ja tämä arviointi tulee sen jälkeen, kun olet tehnyt työn sen järjestämiseksi."},
+      {link:{href:"HOW", title:"Kuinka osallistua, viralliset vaiheet", desc:"Järjestys asiakirjoista rekisteröinnin kautta parinhakuun ohjelman omilla sanoilla."}},
+      {link:{href:"LCP", title:"Löydä paikallinen yhteyspiste", desc:"Hae maittain. Tämä on organisaatio, joka käsittelee sopimuksesi ja maksaa tukesi."}}
+    ]},
+
+    { id:"4.2", title:"Maat ja toimialan valinta", type:"reading", dur:"6 min", blocks:[
+      {p:"Vaistona on valita maa, josta nauttisit. Vastusta sitä yhden kierroksen ajan ja valitse kolmen muun kriteerin mukaan ensin, ja anna mieltymyksen ratkaista tasapelit vasta sitten."},
+      {h:"Missä osaamisaukko ratkaistaan oikeasti"},
+      {p:"Jos aukkosi on säädelty elintarviketuotanto, vaativimman järjestelmän maa opettaa sinulle enemmän kuin miellyttävä maa. Jos se on yritysmyynti kuluttajamyynnin sijaan, mene sinne, missä alasi ostajat ovat keskittyneet."},
+      {h:"Mitä rahasi tekevät siellä"},
+      {p:"Kuukausituki määrätyt maittain, ja samoin tekevät elinkustannukset. Nämä kaksi eivät liiku käsi kädessä. Pienempi luku halvemmassa maassa voi jättää sinut parempaan asemaan kuin suurempi luku kalliissa kaupungissa, ja neljän kuukauden erotus on ero loppuun viemisen ja ennenaikaisen kotiinpaluun välillä."},
+      {h:"Millä kielellä yritys pyörii"},
+      {p:"Ei sillä, mitä kieltä maassa puhutaan. Pienyrityksen sisäinen elämä, sen toimittajat ja asiakkaat voivat kaikki olla paikallisella kielellä silloinkin, kun omistajan englanti sujuu. Kysy suoraan, mitä et pysty seuraamaan."},
+      {note:"Punnitse myös se, mitä säilytät sen jälkeen. Pysyvä arvo, jonka useimmat osallistujat raportoivat, ovat ulkomaalaiset kontaktit ja mahdolliset kumppanit. Toimiala, jolla voisit myöhemmin uskottavasti myydä tai hankkia, on arvokkaampi kuin sellainen, jolla et voi."}
+    ]},
+
+    { id:"4.3", title:"Ensimmäinen viesti isännälle", type:"template", dur:"7 min", blocks:[
+      {p:"Isännät saavat lähestymisiä, jotka koskevat vain lähettäjää. Sinun viestisi tulisi koskea enimmäkseen heitä, olla tarpeeksi tarkka osoittaaksesi, että katsoit, ja helppo kieltäytyä. Kieltäytymisen tekeminen helpoksi ei ole heikkoutta; se tuo vastauksen ylipäätään."},
+      {tmpl:{title:"Ensimmäinen lähestyminen isäntäyrittäjälle", text:
+"Aihe: EYE-vaihto – [alasi], [kuukaudet, jolloin olet vapaana]\n\nHyvä [nimi],\n\nHae Erasmus nuorille yrittäjille -ohjelmaan uutena yrittäjänä ja etsin isäntää alalta [ala].\n\nMiksi te: [yksi tai kaksi lausetta, jotka olisi voitu kirjoittaa vain tästä yrityksestä. Jokin huomio heidän toiminnastaan, markkinasta, johon he tulivat, tai rajoitteesta, jonka alla he selvästi toimivat.]\n\nMitä minä voisin tuoda: [tietty, tarkistettava taito. Ei ahkera tai motivoitunut. Vaan esimerkiksi: Olen rakentanut uudelleen toimittajan hinnoittelumallin, puhun suomea ja venjää, osaan hoitaa tuotelistaustanne Pohjoismaiden markkinoilla.]\n\nMitä haluan oppia: [suunnitelman osaamisaukko nimettynä.]\n\nKäytännön asiat: [kuukaudet, jolloin olet vapaana], [1–6] kuukautta, ohjelma tukee matka- ja elinkustannuksiani, joten teille ei tule palkkakustannuksia. Oma suunnitelmani on [yksi rivi].\n\nJos tämä ei sovi, yhden rivin ei-vastaus on minulle aidosti hyödyllinen enkä kysele perään kahdesti. Jos tämä on keskustelun arvoinen, voin jutella minä tahansa [päivämääräväli].\n\n[Nimi]\n[Linkki johonkin tekemääsi, jos sinulla sellainen on]"}},
+      {h:"Kaksi sääntöä lähettämiselle"},
+      {ul:[
+        "Seuraa tilannetta kerran, noin kymmenen päivän päästä, ja lopeta sitten. Toinen seuranta maksaa sinulle kontaktin.",
+        "Kirjaa ylös jokainen lähestyminen päivämäärällä ja lopputuloksella, hiljaisuudet mukaan lukien. Kymmenen kirjatut lähestymistä on todellinen asiakirja; kielteisyyksien kaava muuttaa tapaa, jolla kirjoitat yhdennentoista."
+      ]},
+      {ev:[["2.5","Muiden mobilisointi"],["4.2","Hylkäyksestä toipuminen"],["4.1","Näkyvyys"]]}
+    ]},
+
+    { id:"4.4", title:"Kysymykset ennen sitoutumista", type:"checklist", dur:"6 min", blocks:[
+      {p:"Siinä vaiheessa kun isäntä sanoo kyllä, vauhti vaikeuttaa pois kävelyä. Kysy nämä silloin, kun pois kävely on vielä helppoa. Muista, että saat ohjelmaan vain yhden yrityksen, mikä tekee kohteliaasta ei-vastauksesta keskinkertaiselle isännälle järkevän päätöksen kiittämättömän sijaan."},
+      {check:{id:"c4-4", items:[
+        {t:"Tiedän tarkalleen, mitä teen ensimmäisellä viikolla.", s:"Isäntä, joka ei osaa vastata tähän, ei ole ajatellut vaihtoa."},
+        {t:"Tiedän, kenelle raportoin ja kuinka usein todella puhumme.", s:"Kysy tuntimäärää viikossa. Epämääräinen saatavuus tarkoittaa olematonta saatavuutta."},
+        {t:"Olen kysynyt, mitä he odottavat saavuttavansa tällä.", s:"Isäntä vailla vastausta tarjoaa sietokykyä yhteistyön sijaan. Se on myös ohjelman kelpoisuusongelma."},
+        {t:"Olen vahvistanut, että kyseessä on yhteistyö, ei harjoittelu tai henkilöstön paikkaus.", s:"Isännät eivät voi käyttää vaihtoa palkattomana työvoimana. Jos kuvaus kuulostaa työpaikalta, sano se ääneen nyt."},
+        {t:"Olen tarkistanut, että meillä ei ole aiempaa tai suunniteltua liike- tai perhesuhdetta.", s:"Moduulin 2.3 listaa vasten."},
+        {t:"Olen kysynyt, millä kielellä yritys todellisuudessa pyörii.", s:"Mukaan lukien toimittajat, järjestelmät ja asiakkaat."},
+        {t:"Olen kysynyt majoituksesta ja saanut tarkan vastauksen tai selkeän ei-vastauksen.", s:"Jotkut isännät auttavat. Oletus, että he tekevät niin kysymättä, johtaa siihen, että ihmiset saapuvat ilman paikkaa missä asua."},
+        {t:"Olen puhunut aiemman uuden yrittäjän kanssa, jonka he ovat ottaneet vastaan, tai varmistanut, että sellaista ei ollut.", s:"Useimmat isäntäyrittäjät, jotka nauttivat siitä, isännöivät toistuvasti. Jos aikaisempia on, pyydä saada puhua yhdelle."}
+      ]},
+      {p:"Kuusi tai enemmän, ja tämä on yhteisyrityksen arvoinen pari yhteyspisteellesi ehdotettavaksi. Kolme tai vähemmän, ja olet tuhlannut ainoan yrityksesi mukavuuteen."}
+    ]}
+  ]},
+
+  /* ============================== 5 ============================== */
+  { n:5, title:"Paperityöt ja raha", blurb:"Neljä vaihetta, asiakirjat jotka allekirjoitat, ja budjetti, joka ratkaisee kestätkö loppuun asti.",
+    lessons:[
+    { id:"5.1", title:"Neljä vaihetta", type:"reading", dur:"5 min", blocks:[
+      {p:"Vaivion tunnistaminen, validointi, toteuttaminen ja arviointi etenevät neljässä vaiheessa. Muodon tunteminen estää sinua pitämästä pitkää parinhakuvaihetta hylkäyksenä."},
+      {ol:[
+        "<b>Hakemus.</b> Haet verkossa ja valitset yhteyspisteen. Kyseinen organisaatio arvioi hakemuksesi ja antaa palautetta kelpoisuudesta ja hyväksynnästä.",
+        "<b>Parinhaku.</b> Hyväksynnän jälkeen voit nähdä verkkoluettelon ja aloittaa parin haun, tai yhteyspiste auttaa löytämään sellaisen. Tällä vaiheella ei ole kiinteää kestoa, mikä on normaalia.",
+        "<b>Sopimukset ja valmistelu.</b> Parin sovittua sitoumus eli toimintasuunnitelma laaditaan yhteyspisteiden avustuksella ja kaikkien osapuolten allekirjoittamana. Allekirjoitat erillisen rahoitussopimuksen oman yhteyspisteesi kanssa. Saat perehdytyksen ennen matkustamista.",
+        "<b>Toteutus.</b> Suoritat oleskelun yhdessä tai useammassa jaksossa ja raportoit siitä. Vastuussa olevat yhteyspisteet valvovat toiminnan arvoa ja arvioivat tuloksia."
+      ]},
+      {p:"Vaihdon jälkeen sekä sinä että isäntä täytätte pakollisen verkko-palautelomakkeen yhteistyöstä."},
+      {link:{href:"PRAC", title:"Vaihto käytännössä", desc:"Viralliset yksityiskohdat siitä, miten vaihto valmistellaan, toteutetaan ja päätetään."}}
+    ]},
+
+    { id:"5.2", title:"Sitoumus ja toimintasuunnitelma", type:"reading", dur:"6 min", blocks:[
+      {p:"Sitoumus on verkkodokumentki, joka laaditaan parisi tultua hyväksytyksi. Siinä määritellään vaihdon tavoitteet ja odotukset, liiketoiminta-, työ- ja oppimissuunnitelma, tehtävät, vastuut ja oikeudelliset vaikutukset. Sen allekirjoittavat sinä, isäntä ja yhteyspisteet."},
+      {p:"Pidä luonnostelua koko prosessin hyödyllisimpänä viikkona täytettävän lomakkeen sijaan. Se on ainoa kohta, jossa omat odotuksesi ja isännän odotukset pakotetaan samaan asiakirjaan, ja mahdolliset erot paljastuvat halvalla. Jälkeenpäin siitä tulee asia, johon viittaat kolmannen kuukauden alkaessa lipsua."},
+      {h:"Varmista, että se vastaa näihin"},
+      {ul:[
+        "Mitä olet tuottanut loppuun mennessä, substantiiveilla ilmaistuna verbien sijaan.",
+        "Mitä isännän ongelmaa työstät nimeltä mainittuna.",
+        "Kuinka monta tuntia viikossa sinä ja isäntä vietätte yhdessä.",
+        "Kuka omistaa kaiken sen, mitä rakennat vaihdon aikana.",
+        "Mitä tapahtuu, jos homma ei toimi, ja missä vaiheessa siitä puhutaan ääneen."
+      ]},
+      {p:"Neljäs kohta ansaitsee huomiota ennen allekirjoitusta. Jos kirjoitat koodia, suunnittelet prosessin tai tuotat materiaalia, jolla on arvoa myöhemmin, sovi omistajuudesta asiakirjassa hyväntahtoisuuteen luottaimisen sijaan."},
+      {link:{href:"CONTR", title:"Sopimukseen ja rahoitukseen liittyvät näkökohdat", desc:"Virallinen ohjeistus sitoumuksesta, sopimuksista ja siitä, mitä kukin osapuoli allekirjoittaa."}},
+      {ev:[["3.2","Suunnittelu"],["1.3","Visio"],["3.4","Yhteistyö"]]}
+    ]},
+
+    { id:"5.3", title:"Rahoitussopimus", type:"reading", dur:"5 min", blocks:[
+      {p:"Sinä ja paikallinen yhteyspisteesi allekirjoitatte sopimuksen, joka määrittää oleskelusi aikana myönnettävän rahoituksen ja sen maksamisen käytännössä. Tuki lasketaan kuukausittain oleskelumaalle määritetyn kiinteän summan perusteella ja se kattaa vain sen ajan, joka vietetään ulkomailla isännän kanssa yhteistyössä."},
+      {h:"Kysy nämä ennen allekirjoitusta"},
+      {ul:[
+        "Milloin kukin maksu saapuu suhteessa vuokran eräpäivään siellä.",
+        "Maksetaanko mitään ennen matkaa ja miten paikkaat mahdollisen aukon, jos ei.",
+        "Mitä läsnäolonäyttöä vaaditaan ja mitä tapahtuu, jos jakso keskeytyy.",
+        "Mitä tapahtuu, jos vaihto katkaistaan ennenaikaisesti sinun tai isännän toimesta."
+      ]},
+      {p:"Maksujen ajoitusta koskeva kysymys on käytännöllinen. Jos tuki saapuu jälkikäteen ja takuumaksu sekä ensimmäisen kuukauden vuokra on maksettava saavuttaessa, tarvitset kyseisen summan käteen ennen lähtöä riippumatta siitä, mitä kuukausiluku sanoo."},
+      {link:{href:"MONEY", title:"Taloudellinen tuki ja kuukausittainen tukitaulukko", desc:"Viralliset summat oleskelumaittain. Tarkista lukemasi taulukon päivämäärä."}},
+      {warn:"Raha on tarkoitettu matka- ja elinkustannuksiin vaihdon aikana. Sen käyttäminen muuhun on ohjelman ehtojen rikkomista."}
+    ]},
+
+    { id:"5.4", title:"Vakuutukset, oleskelu ja asuminen", type:"reading", dur:"6 min", blocks:[
+      {p:"Nämä ovat käytännön asioita, jotka eivät kuulu kenellekään muulle kuin sinulle, ja ne asiat, jotka useimmiten muuttavat toimivan suunnitelman kalliiksi. Mikään alla olevista vastauksista ei ole neuvo; jokainen on kysymys, jonka mukana on siihen vastaava viranomainen."},
+      {h:"Sairausvakuutus ja vakuutukset"},
+      {p:"Kysy yhteyspisteeltäsi, mitä vakuutuksia ohjelma vaatii ja mitä se ei tarjoa. Kysy sitten omalta kansalliselta sairausvakuutusviranomaiseltasi, mikä koskee oleskelusi pituutta kohdemaassasi, ja hanki vastaus kirjallisena. Vastuuvakuutus työskennellessä toisen yrityksessä on eri kysymys; kysy isännältä, mitä heidän vakuutuksensa kattaa."},
+      {h:"Oleskelu- ja työnteko-oikeus"},
+      {p:"Vaihto ei ole työllistymistä, mikä voi tehdä asemastasi odotettua monimutkaisemman. Jos olet asukas muttet maasi kansalainen, kysy kohdemaasi viranomaisilta nimenomaan oleskeluluvastasi ja 1–6 kuukauden oleskelusta. Tee tämä ajoissa. Se on prosessin hitaimmin etenevä asia."},
+      {h:"Asuminen"},
+      {p:"Oleta järjestäväsi sen itse ja budjetoi sen mukaan. Kysy isännältä, voisivatko he ehdottaa jotain, sillä monet voivat, mutta älä rakenna suunnitelmaa sen varaan. Vältä suuren takuumaksun maksamista ennen kuin olet nähnyt paikan tai puhunut jonkun sen tuntevan kanssa."},
+      {h:"Verotus"},
+      {p:"Kysy omalta veroviranomaiseltasi, miten tukea verotetaan ja muuttaako oleskelusi pituus verotuksellista asuinpaikkaasi. Vastaus vaihtelee maittain ja pituuden mukaan, minkä vuoksi se vaatii kysymistä olettamisen sijaan."},
+      {note:"Yhteyspisteesi tekee tämän rutiininomaisesti ja on nähnyt virhetilanteet. Tuo heille tämä lista sen sijaan, että teet kaiken yksin."}
+    ]},
+
+    { id:"5.5", title:"Oleskelubudjettisi", type:"template", dur:"6 min", blocks:[
+      {p:"Yksi sivu, täytettynä todellisilla luvuilla ennen minkään allekirjoittamista. Viimeinen rivi on se, jolla on väliä."},
+      {tmpl:{title:"Oleskelubudjetti", text:
+"KOHDEMAA:                      KUUKAUDET:\nKUUKAUSITUKI (virallisesta taulukosta):\nPÄIVÄMÄÄRÄ, JOLLOIN LUIN KYSEISEN LUVUN:\n\nENNEN LÄHTÖÄ (ei kuulu tuen piiriin)\n  Matkat pois                     \n  Takuumaksu ja ensimmäinen vuokra  \n  Lupa, vakuutukset, asiakirjat      \n  Tarvittavat varusteet            \n  YHTEENSÄ ENNEN:\n\nJOKAINEN KUUKAUSI SIELTÄ\n  Vuokra                          \n  Ruoka                           \n  Paikallisliikenne               \n  Puhelin ja internet             \n  Terveysvakuutus                 \n  Kaikki mitä maksan yhä kotona   \n  YHTEENSÄ KUUKAUDESSA:\n\nKUUKAUSITTAINEN VAJE (tuki miinus kuukausisumma):\nKOKONAISVAJE KOKO OLESKELUN AJALTA:\nPLUS KOKONAISVAJE ENNEN LÄHTÖÄ:\n\nTÄTEN TARVITSEN OMAA RAHAA NÄIN PALJON:\nMISTÄ SE TULEE:\nMITÄ TEEN, JOS OLEN KUUKAUDEN JÄLJESSÄ:"}},
+      {p:"Jos kaksi viimeistä riviä ovat tyhjiä, suunnitelma ei ole valmis, riippumatta siitä kuinka hyvä pari on kyseessä. Selvitä ne nyt, kun vastaus voi vielä muuttaa päivämääriäsi tai kohdemaatasi."},
+      {ev:[["2.4","Taloudellinen lukutaito"],["3.2","Suunnittelu"],["3.3","Epävarmuus ja riski"]]}
+    ]}
+  ]},
+
+  /* ============================== 6 ============================== */
+  { n:6, title:"Ota vaihdosta kaikki irti", blurb:"Itse vaihto, ja miten palaat kotiin jonkin kestävämmän kanssa kuin pelkän hauskan ajan.",
+    lessons:[
+    { id:"6.1", title:"Ensimmäiset kaksi viikkoa", type:"reading", dur:"5 min", blocks:[
+      {p:"Ensimmäiset kaksi viikkoa määrittävät loppukuukausien ilmeen, ja oletuksena on ajautuminen: sinulle annetaan jotain turvallista ja reuna-alueilla olevaa, kaikki ovat kohteliaita, ja toiseen kuukauteen tultaessa kaava on lukittu."},
+      {ul:[
+        "Ensimmäisellä viikolla pyydä saada nähdä se yrityksen osa, joka menee huonosti. Siellä opit ja siellä voit antaa panoksen, jota isäntä arvostaa.",
+        "Toimita jotain pientä ja valmista kahden ensimmäisen viikon aikana. Se muuttaa kohteluasi enemmän kuin mikään keskustelu.",
+        "Sovi viikoittainen tapaamisaika isännän kanssa kirjallisesti ensimmäisen viikon aikana. Jos sitä ei ole kalenterissa, se ei selviä kiireisen kuukauden läpi.",
+        "Sano ääneen kerran, mitä toivot pystyväsi tekemään loppuun mennessä. Isännät eivät voi tähdätä tavoitteeseen, josta he eivät ole kuulleet."
+      ]},
+      {p:"Jos toinen viikko näyttää palkattomalta hallinnolliselta työltä, nosta se esiin toimintasuunnitelmaan viitaten. Virhe on paljon helpompi korjata toisella viikolla kuin kolmantena kuukautena, ja suunnitelma on olemassa juuri siksi, että tällä keskustelulla on asiakirja tukenaan."}
+    ]},
+
+    { id:"6.2", title:"Näytön ylläpitäminen sen tapahtuessa", type:"reading", dur:"6 min", blocks:[
+      {p:"Lopussa haluat näyttää, mihin pystyt nyt. Sen rakentaminen uudelleen muistista tuottaa yleistyksiä. Kakskymmentä minuuttia viikossa tuottaa jotain konkreettista."},
+      {h:"Viikoittainen muistiinpano, neljä riviä"},
+      {ol:[
+        "Mitä tein, mitä en olisi voinut tehdä kuukausi sitten.",
+        "Minkä tein väärin ja mitä muutin.",
+        "Isännän tekemät päätökset, jotka olisin tehnyt eri tavalla, ja miksi he olivat oikeassa tai väärässä.",
+        "Yksi tuotos: asiakirja, malli, viesti, valokuva jostakin rakennetusta."
+      ]},
+      {p:"Kolmas rivi on se, joka kumuloituu. Oman päättelyn kirjaaminen kokeneen yrittäjän päätöksiä vasten viikko viikolta on lähimpänä kehittyvän harkinnan kirjaa, ja se on paljon vakuuttavampi kuin suosituskirje."},
+      {p:"Pidä tuotokset tallessa matkan varrella päivämäärillä varustettuna. Kansio päivättyjä tiedostoja lopussa on arvokkaampi kuin suosituskirje, koska se näyttää tehdyn työn laadun vakuuttamisen sijaan."},
+      {note:"Tämä on sama periaate, jolle AurinkoLabin osaamiskirjanpito rakentuu: mitä teit, havaitsit ja todensit sen sijaan, mitä sanot itsestäsi jälkikäteen. Viikoittainen muistiinpano on kyseinen kirja yksinkertaisimmassa mahdollisessa muodossaan."},
+      {ev:[["3.5","Oppiminen tekemällä"],["2.1","Itsetuntemus"],["4.4","Tunteiden nimeäminen"]]}
+    ]},
+
+    { id:"6.3", title:"Raportointi ja loppukysely", type:"reading", dur:"4 min", blocks:[
+      {p:"Raportoit oleskelustasi, ja vastuussa olevat yhteyspisteet valvovat toiminnan arvoa ja arvioivat tuloksia. Vaihdon jälkeen sekä sinä että isäntä täytätte pakollisen verkko-palautelomakkeen yhteistyöstänne."},
+      {p:"Se kannattaa kirjoittaa huolella eikä kiireellä. Kysely on yksi harvoista paikoista, joihin pienten vaihtojen todelliset tapahtumat tallentuvat, ja se vaikuttaa siihen, miten ohjelmaa arvioidaan ja rahoitetaan. Rehellinen kuvaus siitä, mikä ei toiminut, on hyödyllisempi seuraavalle osallistujalle kuin pelkkä kiitollinen pala kaikesta."},
+      {p:"Pidä oma kopio kaikesta, mitä lähetät. Ohjelmaa varten tekemäsi raportointi on myös raaka-ainetta kaikelle sille, mitä kirjoitat itsestäsi jälkikäteen."}
+    ]},
+
+    { id:"6.4", title:"Mitä sinulla on jäljellä sen jälkeen", type:"reading", dur:"5 min", blocks:[
+      {p:"Ole tarkkanäköinen sen suhteen, mitä vaihto jättää käteen ja mitä ei, koska odotusten ja lopputuloksen välinen kuilu on paikka, jossa ihmiset päättelevät sen olleen turhaa."},
+      {h:"Mitä sinulla todennäköisesti on"},
+      {ul:[
+        "Ulkomaalaisia kontakteja alaltasi, ja joissakin tapauksissa reitti toimittajaan, asiakkaaseen tai kumppaniin.",
+        "Konkreettinen käsitys siitä, miten pienyritys alallasi pyörii arjessa.",
+        "Näyttöä: päivättyjä tuotoksia todellisessa yrityksessä tehdystä työstä.",
+        "Parempi suunnitelma, yleensä pienempi, koska kontakti toimivaan yritykseen yleensä karsii ambitionsa supistettuun, toteuttamiskelpoiseen muotoon."
+      ]},
+      {h:"Mitä se ei anna sinulle"},
+      {ul:[
+        "Tutkintoa. Lopussa ei ole tutkintoa tai lisenssiä.",
+        "Rahoitusta yrityksellesi. Tuki kattaa oleskelun, ei itse yritystoimintaa.",
+        "Ennustetta siitä, että yrityksesi tulee toimimaan. Mikään tässä prosessissa, mukaan lukien mikään mitä AurinkoLab mittaa, ei kerro sinulle sitä."
+      ]},
+      {p:"Yleisin todellinen lopputulos on suunnanmuutos: idea, jonka kanssa saavut, ei ole sama, jonka kanssa lähdet. Se on onnistunut vaihto, ei epäonnistunut. Rakentamasi osaaminen on sinun, riippumatta siitä, selvisikö alkuperäinen idea."}
+    ]}
+  ]},
+
+  /* ============================== 7 ============================== */
+  { n:7, title:"Vastaukset ja viralliset polut", blurb:"Yleiset kysymykset, sanasto ja ne kaksi linkkiä, joilla on oikeasti väliä.",
+    lessons:[
+    { id:"7.1", title:"Usein kysytyt kysymykset", type:"reading", dur:"7 min", blocks:[
+      {p:"Vastaukset tiivistävät virallisen tilanteen syyskuussa 2026. Jos kyse on rahasta, asuinpaikasta tai omista olosuhteistasi, varmista asia ohjelman tukipalvelusta tai yhteyspisteeltä tämän sivun sijaan."},
+      {qa:[
+        ["Maksaako hakeminen mitään?","Ei. Hakeminen ja osallistuminen ovat maksuttomia, ja ohjelma ilmoittaa, että mikään organisaatio ei saa periä haku- tai osallistumismaksuja. Jos sinulta pyydetään maksua, pidä sitä varoitusmerkkinä."],
+        ["Voiko joku hakea puolestani?","Ei. Sinun on lähetettävä hakemuksesi henkilökohtaisesti virallisen alustan kautta. Ulkopuolisten kautta tehdyt hakemukset eivät ole sallittuja, ja ne voivat johtaa ohjelmasta sulkemiseen ja mahdollisesti maksetun tuen takaisinperintään."],
+        ["Onko olemassa ikärajaa?","Yläikärajaa ei ole. Kaikkien osallistujien on oltava yli 18-vuotiaita. Ohjelman nimessä esiintyvä nuori viittaa uuteen yritykseen, ei sinuun."],
+        ["Pitääkö minun olla jo perustanut yritys?","Ei. Voit täyttää ehdot suunnittelemalla yrityksen perustamista tiukasti elinkelpoisen liiketoimintasuunnitelman varaan. Vaihtoehtoisesti täytät ehdot alle kolmen vuoden yrittäjäkokemuksella."],
+        ["Voinko tehdä sen useammin kuin kerran?","Ei. Uudet yrittäjät voivat osallistua kerran."],
+        ["Voinko mennä maahan, jossa olen asunut tai opiskellut?","Sitä ei ole erikseen kielletty. Ohjelmaa ei kuitenkaan saa käyttää väärin, esimerkiksi palaamalla pelkästään kotimaahasi tai paikkaan, jossa olet äskettäin viettänyt pitkän ajan. Tapaukset arvioidaan erikseen."],
+        ["Voiko isäntäni olla ystävä, sukulainen tai joku, jonka kanssa työskentelen jo?","Ei. Perhesuhteet on rajattu pois, samoin aiemmat tai suunnitellut liikesuhteet, jotka tekisivät vaihdosta tarpeettoman, sekä isännät, jotka ovat tai joista tulee osaomistajia tai sijoittajia, tai järjestelyt, joissa aiot avata isännän yrityksen sivuliikkeen."],
+        ["Onko tämä työpaikka? Maksetaanko minulle palkkaa?","Ei. Tämä on kahden yrittäjän välinen yhteistyö. Isännät eivät voi käyttää sitä palkattoman työn lähteenä tai harjoitteluna, eikä palkkaa makseta. Saat taloudellista tukea matka- ja elinkustannuksiin."],
+        ["Kuinka kauan parinhaku kestää?","Kiinteää aikaa ei ole. Hyväksyntä ohjelmaan ei takaa paria. Luettelo ja yhteyspiste ovat molemmat reittejä; oman isännän ehdottaminen on usein nopeampaa."],
+        ["Kuka maksaa tukeni?","Hakemuksessasi valitsemasi paikallinen yhteyspiste. Allekirjoitat heidän kanssaan sopimuksen rahoituksesta ja sen maksutavasta."],
+        ["Entä jos vaihto menee pieleen?","Ota asia esille yhteyspisteen kanssa ajoissa eikä vasta lopussa. Kysy keskeytyksestä ja ennenaikaisesta purkamisesta ennen rahoitussopimuksen allekirjoittamista, jotta tiedät tilanteen etukäteen."],
+        ["Mitä työttömyystuulleni tapahtuu?","Vain oma työllisyysviranomaisesi ja etuuslaitoksesi voivat vastata siihen. Kysy ennen päivämääriin sitoutumista ja hanki vastaus kirjallisena."]
+      ]},
+      {link:{href:"FAQ", title:"Viralliset usein kysytyt kysymykset", desc:"Huomattavasti tätä listaa pitempi ja auktoriteetti, jos nämä kaksi eroavat toisistaan."}},
+      {link:{href:"HELP", title:"Ohjelman tukipalvelu", desc:"Kysymyksiin, joihin UKK ei vastaa. Tukitoimistoon voi ottaa yhteyttä myös osoitteessa support@erasmus-entrepreneurs.eu."}}
+    ]},
+
+    { id:"7.2", title:"Löydä paikallinen yhteyspisteesi", type:"link", dur:"2 min", blocks:[
+      {p:"Yhteyspisteesi arvioi hakemuksesi, auttaa parin haussa, allekirjoittaa rahoitussopimuksesi ja maksaa tukesi. Ne ovat tyypillisesti kauppakamareita, startup-keskuksia tai hautomoita, joilla on osaamista yritystuessa. Alueesi kattavan ja viesteihin nopeasti vastaavan yhteyspisteen valitsemisella on enemmän väliä kuin useimmat hakijat ymmärtävät."},
+      {link:{href:"LCP", title:"Paikallisten yhteyspisteiden haku", desc:"Hae maittain. Ota yhteyttä kahteen tai kolmeen ja katso, mitkä vastaavat hyödyllisesti ennen hakemukseen sitoutumista."}},
+      {p:"Ensimmäisellä yhteydenotolla kysyttäviä asioita: kuinka monta uutta yrittäjää he sijoittivat viime vuonna, miten he haluavat sinun lähestyvän itse löytämäsi isännän kanssa, ja kuinka nopeasti tuki maksetaan saapumisen jälkeen."}
+    ]},
+
+    { id:"7.3", title:"Hae virallisella alustalla", type:"link", dur:"2 min", blocks:[
+      {p:"Kun suunnitelmasi on kirjoitettu, kustannuslaskelma tehty, tukikysymykseesi on vastattu ja olet lukenut kriteerit itse, tässä on paikka, jonne menet. Lähetät sen henkilökohtaisesti täällä."},
+      {link:{href:"TOOL", title:"Virallinen haku-alusta", desc:"Euroopan komission ylläpitämä. Ainoa laillinen reitti sisään."}},
+      {link:{href:"APPLY", title:"Ohjeet hakemuksen jättämiseen", desc:"Mitä hakemuksen on sisällettävä ja standardi, jota vasten sitä arvioidaan. Lue tämä ennen kuin täytät mitään."}},
+      {warn:"AurinkoLabilla ei ole roolia hakemuksessasi, eikä se voi nähdä, välittää, tarkistaa tai vaikuttaa siihen. Kuka tahansa, joka väittää muuta tästä ohjelmasta, on joko väärässä tai yrittää huijausta."}
+    ]},
+
+    { id:"7.4", title:"Ohjelman käyttämät sanat", type:"reading", dur:"4 min", blocks:[
+      {p:"Sanasto on tarkkaa ja esiintyy virallisissa asiakirjoissa kauttaaltaan ilman selityksiä."},
+      {qa:[
+        ["Uusi yrittäjä (NE)","Sinä, jos suunnittelet yrityksen perustamista elinkelpoisen suunnitelman varaan tai sinulla on alle kolme vuotta yrittäjäkokemusta. Henkilö, joka matkustaa."],
+        ["Isäntäyrittäjä (HE)","Kokenut pk-yrityksen omistaja tai johtaja ulkomailla, joka ottaa sinut vastaan."],
+        ["Paikallinen yhteyspiste","Maasi yritystuki-organisaatio, joka arvioi hakemuksesi, auttaa parin haussa ja maksaa tukesi. Kauppakamarit, startup-keskukset, hautomot."],
+        ["Välittäjäorganisaatio (IO)","Sama kehon tyyppi nimettynä sen mukaisesti kuin se esiintyy ohjelman sopimusasiakirjoissa. Tulet näkemään molempia termejä käytettävän."],
+        ["Tukitoimisto (Support Office)","Koordinoi yhteyspisteitä Euroopan tasolla Euroopan komission puolesta. Tukipalvelu sijaitsee täällä."],
+        ["Osallistujamaa","Maa, jonka asukkaat voivat osallistua. Ohjelma asettaa listan, joka ei ole sama kuin EU. Tarkista se oletusten sijaan."],
+        ["Sitoumus","Allekirjoitettu verkkodokumentti, jossa määritellään tavoitteet, työ- ja oppimissuunnitelma, tehtävät, vastuut ja oikeudelliset vaikutukset. Kutsutaan myös toimintasuunnitelmaksi."],
+        ["Rahoitussopimus","Sinun ja yhteyspisteen välinen erillinen sopimus, joka määrittää rahoituksesi ja sen maksutavan."],
+        ["Vaihto","Itse oleskelu, 1–6 kuukautta, yhdessä tai useammassa jaksossa."]
+      ]},
+      {note:"Kaksi termiä, joita et löydä virallisista asiakirjoista: pistemäärä ja todistus. Ohjelma ei tuota kumpaakaan, eikä myöskään tämä kurssi."}
+    ]}
+  ]}
+  ]
+};
+
+var OTHER_COURSES = [
+  { title:"Arvonluontihaasteet", sub:"Yrittäjyyspolku, kartoitettu EntreComp-kehykseen",
+    body:"Kymmenen haastetta, joista jokainen luo arvoa jollekin ryhmän ulkopuolisella, pisteytetty havaitun käyttäytumisen mukaan skaalatulla matriisilla kyselyn sijaan. Osaamiskartta on valmis; haasteohjelma pyörii sertifioidun ohjaajan kanssa.",
+    meta:"20 haastetta, 20 osaamislankaa, 8 tasoa", state:"Kehitteillä" },
+  { title:"STEM- ja insinööripolku", sub:"Mekaniikka, elektroniikka, koodi ja ohjaus, valmistus, vihreä teknologia",
+    body:"Esivaatimusten rakenne pyörän sijaan, koska insinööritaidot ketjuituvat aidosti. 31 solmua viidellä haaralla, joista jokainen päättyy ammatilliseen polkuun.",
+    meta:"31 solmua, 5 haaraa", state:"Suunnitteilla" }
+];
+
+</script>
+<script>
+"use strict";
+
+var SITE = "https://espoo.aurinkolab.fi/";
+
+var LESSONS = [];
+COURSE.modules.forEach(function(m){
+  m.lessons.forEach(function(l){ l.mod = m; LESSONS.push(l); });
+});
+
+var TYPE = {
+  reading:   { ic:"\u25A4", label:"luku" },
+  video:     { ic:"\u25B6", label:"video" },
+  checklist: { ic:"\u2611", label:"tarkistuslista" },
+  template:  { ic:"\u270E", label:"malli" },
+  link:      { ic:"\u2197", label:"virallinen linkki" }
+};
+
+var KEY = "aurinkolab.eye.v1";
+var store = { done:{}, checks:{} };
+try{
+  var raw = localStorage.getItem(KEY);
+  if(raw){ var p = JSON.parse(raw); if(p && typeof p === "object"){ store.done = p.done || {}; store.checks = p.checks || {}; } }
+}catch(e){ /* tallennus estetty: edistyminen ei tallennu, kaikki muu toimii */ }
+function save(){ try{ localStorage.setItem(KEY, JSON.stringify(store)); }catch(e){} }
+
+var playing = {};   /* videon avaimet, joita käyttäjä on painanut toistettavaksi, jotta uudelleenrenderöinti pitää ne käynnissä */
+var route = { view:"intro", lesson:null };
+var openMod = 1;
+var railOpen = (typeof window !== "undefined") && window.innerWidth > 980;
+
+function doneCount(){ return LESSONS.filter(function(l){ return store.done[l.id]; }).length; }
+function pct(){ return LESSONS.length ? Math.round(doneCount() / LESSONS.length * 100) : 0; }
+function nextUndone(){
+  for(var i = 0; i < LESSONS.length; i++){ if(!store.done[LESSONS[i].id]) return LESSONS[i]; }
+  return LESSONS[LESSONS.length - 1];
+}
+function url(k){
+  var map = {VIDEO:"video",CHAN:"chan",MONEY:"money",NEPROF:"neprof",ABOUT:"about",HOW:"how",LCP:"lcp",
+    FAQ:"faq",APPLY:"apply",TOOL:"tool",PRAC:"prac",CONTR:"contr",HELP:"help",WHO:"who",NEACT:"neact",
+    HEPROF:"heprof",STORIES:"stories",MATLS:"matls",HOME:"home"};
+  return OFFICIAL[map[k] || "home"];
+}
+function host(u){ try{ return u.replace(/^https?:\/\//,"").split("/")[0]; }catch(e){ return ""; } }
+
+/* ------------------------------------------------------------- blocks */
+
+function blockHtml(b){
+  if(b.h)  return "<h4>" + b.h + "</h4>";
+  if(b.p)  return "<p>" + b.p + "</p>";
+  if(b.ul) return "<ul>" + b.ul.map(function(i){ return "<li>" + i + "</li>"; }).join("") + "</ul>";
+  if(b.ol) return "<ol>" + b.ol.map(function(i){ return "<li>" + i + "</li>"; }).join("") + "</ol>";
+  if(b.note) return '<div class="notice">' + b.note + "</div>";
+  if(b.warn) return '<div class="notice warn">' + b.warn + "</div>";
+  if(b.sun)  return '<div class="notice sun">' + b.sun + "</div>";
+
+  if(b.link){
+    var u = url(b.link.href);
+    return '<a class="linkcard" href="' + u + '" target="_blank" rel="noopener noreferrer"><b>' +
+      b.link.title + "</b><span>" + b.link.desc + '</span><span class="host">' + host(u) + "</span></a>";
+  }
+  if(b.vid){
+    var v = url(b.vid.href);
+    var key = b.vid.yt || b.vid.file;
+    var top;
+    if(playing[key]){
+      /* itse isännöity tiedosto tai YouTube yksityisyydensuojatilassa, käyttäjän käynnistämä */
+      top = b.vid.file
+        ? '<div class="ratio"><video controls autoplay playsinline preload="metadata" src="' + b.vid.file + '"></video></div>'
+        : '<div class="ratio"><iframe src="https://www.youtube-nocookie.com/embed/' + b.vid.yt +
+          '?autoplay=1&amp;rel=0&amp;modestbranding=1" title="' + b.vid.title +
+          '" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ' +
+          'referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>';
+    }else{
+      top = '<button class="fr" data-play="' + key + '" aria-label="Toista ' + b.vid.title + '">' +
+        '<span class="play">\u25B6</span><span class="lb">Toista tässä</span>' +
+        '<span class="hint">' + (b.vid.file ? "Isännöity tällä sivustolla" : "YouTube latautuu vasta painettaessa") +
+        "</span></button>";
+    }
+    return '<div class="vid">' + top + '<div class="bd"><b>' + b.vid.title + "</b><p>" + b.vid.desc + "</p>" +
+      '<a class="alt" href="' + v + '" target="_blank" rel="noopener noreferrer">Avaa sen sijaan YouTubessa</a>' +
+      (b.vid.file ? "" : '<span class="fallback">Jos soitin pysyy tyhjänä, verkkosi tai selaimesi estää ' +
+        "upotetun YouTuben. Yllä oleva linkki avaa saman videon.</span>") +
+      "</div></div>";
+  }
+  if(b.check){
+    var cid = b.check.id, st = store.checks[cid] || [];
+    var rows = b.check.items.map(function(it, i){
+      return '<li><label><input type="checkbox" data-check="' + cid + '" data-i="' + i + '"' +
+        (st[i] ? " checked" : "") + '><span class="tx">' + it.t +
+        (it.s ? '<span class="sub">' + it.s + "</span>" : "") + "</span></label></li>";
+    }).join("");
+    return '<ul class="check">' + rows + '</ul><p class="checksum" data-sum="' + cid + '">' +
+      st.filter(Boolean).length + " / " + b.check.items.length + " valittu</p>";
+  }
+  if(b.tmpl){
+    return '<div class="tmpl"><div class="hd"><span>' + b.tmpl.title + '</span><button data-copy="1">Kopioi</button></div><pre>' +
+      b.tmpl.text.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;") + "</pre></div>";
+  }
+  if(b.qa){
+    return b.qa.map(function(r){ return '<div class="qa"><b>' + r[0] + "</b><p>" + r[1] + "</p></div>"; }).join("");
+  }
+  if(b.ev){
+    var chips = b.ev.map(function(e){
+      return '<li class="a' + String(e[0]).charAt(0) + '">' + e[0] + " " + e[1] + "</li>";
+    }).join("");
+    return '<div class="ev"><p>Tämän tekeminen oikein tuottaa näyttöä näitä osaamislankoja vastaan. ' +
+      "Numerolla 4 merkityt langat ovat AurinkoLabin laajennus eivätkä osa EntreComp-kehystä.</p><ul>" + chips + "</ul></div>";
+  }
+  return "";
+}
+
+/* --------------------------------------------------------------- chrome */
+
+function chrome(inner){
+  return '<div class="banner"><div class="in">' +
+      '<span class="pill">Espoo Campus</span><span class="dot">\u2022</span>' +
+      "<span>Maksuton verkkokurssi \u00b7 oma tahti \u00b7 ei rekisteröitymistä</span>" +
+    "</div></div>" +
+
+    '<nav class="top"><div class="in">' +
+      '<a class="logo" href="' + SITE + '"><span class="sq">A</span>' +
+      '<span><span class="nm">Aurinko<span>Lab</span></span>' +
+      '<span class="sub">Espoo \u2022 Kurssit</span></span></a>' +
+      '<div class="links"><a href="' + SITE + '#courses">Kaikki kurssit</a>' +
+      '<a href="' + SITE + '#location">Yhteystiedot</a>' +
+      (route.view === "lesson" ? '<a href="#" data-go="intro">Kurssin etusivu</a>' : "") +
+      "</div>" +
+    "</div></nav>" +
+
+    inner +
+
+    '<footer class="site"><div class="cols">' +
+      '<div><div class="brandline"><span class="sq">A</span>' +
+      '<span class="hf" style="font-weight:700;font-size:20px;color:var(--ink)">AurinkoLab</span></div>' +
+      "<p style=\"margin:0;color:var(--soft)\">Luomme huomisen uudistajia tänään.</p></div>" +
+      '<div><h4>Tämä kurssi</h4><ul>' +
+        '<li><a href="#" data-go="intro">Kurssin etusivu</a></li>' +
+        '<li><a href="' + SITE + '#courses">Kaikki AurinkoLab-kurssit</a></li>' +
+        '<li><a href="' + OFFICIAL.home + '" target="_blank" rel="noopener noreferrer">Ohjelman virallinen sivusto</a></li>' +
+        '<li><a href="' + OFFICIAL.tool + '" target="_blank" rel="noopener noreferrer">Virallinen haku-alusta</a></li>' +
+      "</ul></div>" +
+      '<div><h4>Ota yhteyttä</h4><ul>' +
+        '<li><a href="mailto:info@aurinkolab.fi">info@aurinkolab.fi</a></li>' +
+        "<li>Vanhan-Mankkaan kuja 2, Espoo</li>" +
+      "</ul></div>" +
+    "</div>" +
+    '<div class="legal">' +
+      "<p>AurinkoLab ry ei ole Erasmus nuorille yrittäjille -ohjelman paikallinen yhteyspiste, sillä ei ole roolia hakemusten arvioinnissa, " +
+      "välittämisessä tai jättämisessä, eikä se ole Euroopan komission tukema, hyväksymä tai kumppani. Hakemukset ohjelmaan " +
+      "on jätettävä henkilökohtaisesti hakijan toimesta virallisen alustan kautta; ulkopuolisten tahojen kautta tehtyjä hakemuksia ei sallita. " +
+      "Ohjelmaan hakeutuminen ja osallistuminen on maksutonta, eikä mikään organisaatio saa periä osallistumismaksua.</p>" +
+      "<p>Tämän sivun ohjelmatiedot tarkistettiin osoitteesta erasmus-entrepreneurs.eu syyskuussa 2026. Jos tämän sivun ja virallisten ohjelmasivujen " +
+      "tiedot eroavat toisistaan, viralliset sivut ovat oikeassa. Mikään tällä sivulla ei ole oikeudellista, vero-, maahanmuutto- tai tukineuvontaa. " +
+      "Tämä kurssi tarjotaan maksutta, eikä se kuulu AurinkoLabin maksullisten vapaa-ajan palveluiden sopimuksen piiriin.</p>" +
+      "<p>Kurssilla mainitut osaamislangat noudattavat EntreComp-kehystä (European Entrepreneurship Competence Framework, Bacigalupo, Kampylis, " +
+      "Punie ja Van den Brande, JRC, 2016), joka on viitekehys eikä standardi. Neljäs alue on AurinkoLabin laajennus eikä kuulu EntreComp-kehykseen. " +
+      "Mikään tässä mitattu ei ennusta, tuleeko yritys menestymään.</p>" +
+      "<p>&copy; 2026 AurinkoLab Espoo.</p>" +
+    "</div></footer>";
+}
+
+/* ---------------------------------------------------------------- views */
+
+function introView(){
+  var started = doneCount() > 0;
+  var mods = COURSE.modules.map(function(m){
+    return '<button class="mrow" data-open="' + m.lessons[0].id + '">' +
+      '<span class="n">' + m.n + "</span><span><h3>" + m.title + "</h3><p>" + m.blurb + "</p>" +
+      '<ul class="ls">' + m.lessons.map(function(l){
+        return "<li>" + (store.done[l.id] ? "\u2713 " : "") + l.title + "</li>";
+      }).join("") + '</ul></span><span class="cnt">' + m.lessons.length + " oppituntia</span></button>";
+  }).join("");
+
+  return chrome('<div class="wrap"><div class="intro"><div class="grid2"><div>' +
+    '<span class="eyebrow">Verkossa \u00b7 maksuton \u00b7 ikäraja 18+</span>' +
+    "<h1>" + COURSE.title + "</h1>" +
+    '<p class="lede">' + COURSE.lede + "</p>" +
+    '<div class="alert"><b>Lue tämä ennen mitään muuta.</b> AurinkoLab ei ole osa ohjelmaa eikä mikään ' +
+      "paikallinen yhteyspiste. Lähetät oman hakemuksesi virallisen alustan kautta. Ulkopuolisten tahojen kautta " +
+      "lähetettyjä hakemuksia ei sallita, mikä voi johtaa ohjelmasta sulkemiseen ja mahdollisesti maksetun tuen " +
+      "takaisinperintään. Ohjelmaan osallistuminen on ilmaista, eikä mikään organisaatio saa veloittaa sinulta maksua.</div>" +
+    '<h3 class="sect">Tämä on kirjoitettu sinulle, jos</h3><ul>' +
+      COURSE.forWhom.map(function(i){ return "<li>" + i + "</li>"; }).join("") + "</ul>" +
+    '<h3 class="sect">Tämä kurssi on väärä valinta, jos</h3><ul>' +
+      COURSE.notFor.map(function(i){ return "<li>" + i + "</li>"; }).join("") + "</ul>" +
+    "</div>" +
+    '<aside class="box"><h3>Yhdellä silmäyksellä</h3><dl>' +
+      COURSE.facts.map(function(f){ return "<dt>" + f[0] + "</dt><dd>" + f[1] + "</dd>"; }).join("") +
+      "<dt>Muoto</dt><dd>Verkossa, omaan tahtiin</dd><dt>Kieli</dt><dd>Englanti</dd></dl>" +
+      (started ? '<div style="margin-top:20px"><div class="pbar"><i style="width:' + pct() + '%"></i></div>' +
+        '<p class="tiny" style="margin:0">' + pct() + "% suoritettu, " + doneCount() + " / " + LESSONS.length + " oppituntia</p></div>" : "") +
+      '<button class="cta solid" data-open="' + (started ? nextUndone().id : LESSONS[0].id) + '">' +
+      (started ? "Jatka siitä mihin jäit" : "Aloita moduuli 1") + "</button>" +
+      '<p class="tiny">Ei käyttäjätiliä tai rekisteröitymistä. Edistyminen muistetaan vain tällä selaimella eikä tietoja lähetetä minnekään.</p>' +
+    "</aside></div></div>" +
+
+    '<section class="modules"><span class="eyebrow">Seitsemän moduulia</span>' +
+      "<h2 class=\"hf\">Mitä kurssi kattaa</h2>" +
+      "<p>Jokainen moduuli päättyy johonkin, joka jää sinulle: lähdeviitteillä varustettu kustannuslaskelma, lähettämäsi viesti, " +
+      "rehellisesti läpikäyty tarkistuslista. Kymmenen oppituntia yhdistää työn myös osaamislankoihin, joten vaiva näkyy " +
+      "näyttönä pelkän läsnäolon sijaan.</p>" + mods +
+    "</section></div>");
+}
+
+function lessonView(){
+  var l = LESSONS.filter(function(x){ return x.id === route.lesson; })[0] || LESSONS[0];
+  var idx = LESSONS.indexOf(l);
+  openMod = l.mod.n;
+
+  var rail = COURSE.modules.map(function(m){
+    var md = m.lessons.filter(function(x){ return store.done[x.id]; }).length;
+    var items = m.lessons.map(function(x){
+      return '<li><button data-open="' + x.id + '"' + (x.id === l.id ? ' aria-current="true"' : "") + '>' +
+        '<span class="ic">' + TYPE[x.type].ic + '</span><span>' + x.title +
+        '<span class="ty">' + TYPE[x.type].label + (x.dur ? " \u00b7 " + x.dur : "") + "</span></span>" +
+        '<span class="dn">' + (store.done[x.id] ? "\u2713" : "") + "</span></button></li>";
+    }).join("");
+    return '<div class="mod' + (m.n === openMod ? " open" : "") + '">' +
+      '<button data-mod="' + m.n + '"><span>' + m.n + ". " + m.title + '</span>' +
+      '<span class="cv">' + md + "/" + m.lessons.length + "</span></button>" +
+      (m.n === openMod ? "<ol>" + items + "</ol>" : "") + "</div>";
+  }).join("");
+
+  var prev = idx > 0 ? LESSONS[idx - 1] : null;
+  var next = idx < LESSONS.length - 1 ? LESSONS[idx + 1] : null;
+  var isDone = !!store.done[l.id];
+
+  return chrome('<div class="player"><aside class="rail">' +
+      '<button class="up" data-go="intro">Takaisin kurssisivulle</button>' +
+      "<h2>" + COURSE.title + "</h2>" +
+      '<div class="prog"><div class="pbar"><i style="width:' + pct() + '%"></i></div>' +
+        '<div class="lbl"><span>' + doneCount() + " / " + LESSONS.length + " tehty</span><span>" + pct() + "%</span></div></div>" +
+      '<button class="toggle" data-rail="1">' + (railOpen ? "Piilota sisällys" : "Näytä kaikki 7 moduulia") + "</button>" +
+      (railOpen ? "<div>" + rail + "</div>" : "") +
+    "</aside>" +
+    '<main class="stage">' +
+      '<p class="crumb">Moduuli ' + l.mod.n + " \u00b7 " + l.mod.title + "</p>" +
+      "<h1>" + l.title + "</h1>" +
+      '<p class="ltype">' + TYPE[l.type].label + (l.dur ? " \u00b7 " + l.dur : "") +
+        " \u00b7 oppitunti " + (idx + 1) + " / " + LESSONS.length + "</p>" +
+      l.blocks.map(function(b){ return blockHtml(b); }).join("") +
+      '<div class="navrow"><button class="mark" data-done="' + (isDone ? "1" : "0") + '" data-toggle="' + l.id + '">' +
+        (isDone ? "Suoritettu \u2713" : "Merkitse suoritetuksi") + '</button><span class="sp"></span>' +
+        '<button data-open="' + (prev ? prev.id : "") + '"' + (prev ? "" : " disabled") + ">Edellinen</button>" +
+        '<button data-open="' + (next ? next.id : "") + '"' + (next ? "" : " disabled") + ">Seuraava</button>" +
+      "</div></main></div>");
+}
+
+/* ---------------------------------------------------------------- wire */
+
+function render(){
+  document.getElementById("app").innerHTML = route.view === "intro" ? introView() : lessonView();
+  wire();
+}
+
+function wire(){
+  document.querySelectorAll("[data-go]").forEach(function(b){
+    b.addEventListener("click", function(ev){
+      ev.preventDefault();
+      route.view = b.dataset.go; route.lesson = null;
+      render(); window.scrollTo(0, 0);
+    });
+  });
+  document.querySelectorAll("[data-open]").forEach(function(b){
+    if(!b.dataset.open) return;
+    b.addEventListener("click", function(){
+      var fromIntro = route.view !== "lesson";
+      route.view = "lesson"; route.lesson = b.dataset.open;
+      render();
+      if(fromIntro) window.scrollTo(0, 0);
+      else { var s = document.querySelector(".stage"); if(s) s.scrollIntoView({ block:"start", behavior:"smooth" }); }
+    });
+  });
+  document.querySelectorAll("[data-mod]").forEach(function(b){
+    b.addEventListener("click", function(){
+      var m = COURSE.modules.filter(function(x){ return x.n === Number(b.dataset.mod); })[0];
+      if(m){ route.view = "lesson"; route.lesson = m.lessons[0].id; render(); }
+    });
+  });
+  document.querySelectorAll("[data-play]").forEach(function(b){
+    b.addEventListener("click", function(){ playing[b.dataset.play] = 1; render(); });
+  });
+  document.querySelectorAll("[data-rail]").forEach(function(b){
+    b.addEventListener("click", function(){ railOpen = !railOpen; render(); });
+  });
+  document.querySelectorAll("[data-toggle]").forEach(function(b){
+    b.addEventListener("click", function(){
+      var id = b.dataset.toggle;
+      if(store.done[id]) delete store.done[id]; else store.done[id] = 1;
+      save(); render();
+    });
+  });
+  document.querySelectorAll("[data-check]").forEach(function(cb){
+    cb.addEventListener("change", function(){
+      var cid = cb.dataset.check, arr = store.checks[cid] || [];
+      arr[Number(cb.dataset.i)] = cb.checked;
+      store.checks[cid] = arr; save();
+      var sum = document.querySelector('[data-sum="' + cid + '"]');
+      if(sum) sum.textContent = arr.filter(Boolean).length + " / " +
+        document.querySelectorAll('[data-check="' + cid + '"]').length + " valittu";
+    });
+  });
+  document.querySelectorAll("[data-copy]").forEach(function(b){
+    b.addEventListener("click", function(){
+      var pre = b.closest(".tmpl").querySelector("pre");
+      var done = function(){ b.textContent = "Kopioitu"; setTimeout(function(){ b.textContent = "Kopioi"; }, 1600); };
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(pre.textContent).then(done, function(){ b.textContent = "Valitse ja kopioi"; });
+      }else{
+        var r = document.createRange(); r.selectNodeContents(pre);
+        var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+        b.textContent = "Paina Ctrl+C";
+      }
+    });
+  });
+}
+
+render();
+
+</script>
+</body>
+</html>
